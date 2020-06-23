@@ -11,11 +11,13 @@ With Power up simulation, users will be able to: 
 
 * Choose a picture that represents a type of a power plant 
 
-* Once the user selects a type of power plant a user will be able to see the simulation of how the electricity travel from the source to the clients.
+* Once the user selects a type of power plant a user will be able to see the animation of how the electricity travel from the source to the clients.
 
-* Users will be able to read important data about selected information from the chart such as, how many of such power plants are being used in the world, their impact on the environment etc.
+* Users will be able to read data of how much selected power plant is in use in 10 different major countries from the bar graph.
 
-* Users will be able to close selected power plant a go back to the home page.
+* Users will be able to read how eco friendly selected power plant is.
+
+* Users will be able to close selected power plant and go back to the home page.
 
 In  addition, this project will include:
 
@@ -25,14 +27,14 @@ In  addition, this project will include:
 
 ## Wireframes 
 
-This app will consist of 4 images that represent types of power plants. It will have, Hydroelectric power plants, Thermal power plants, Solar power plants, and Wind power plants. Ad well as nav links to the Github, my LinkedIn, and the About modal. Clicking on one of the images will lead to a simulation of how the electricity is being produced in the selected power plant as well as a graph with information about how many of those power plants we have in the world, in New York specifically, what are the costs of building and average  power plant of that kind and its effects to the environment. 
+This app will consist of 4 images that represent types of power plants. It will have, Hydroelectric power plants, Thermal power plants, Solar power plants, and Wind power plants. Ad well as nav links to the Github, my LinkedIn, and the About modal. Clicking on one of the images will lead to a sanimation of how the electricity is being produced in the selected power plant as well as a graph with information about how many of those power plants we have in 10 major countries, and its effects to the environment. 
 
 
-![main](./main.png)
+![main](./src/images/main.png)
 
 
 
-![show](./show.png)
+![show](./src/images/show.png)
 
 
 ## Implementation Timeline
