@@ -17,25 +17,10 @@ window.addEventListener("DOMContentLoaded", () => {
 
     // Get the <span> element that closes the modal
    let span = document.getElementsByClassName("close")[0];
-   let spanH = document.getElementsByClassName("close")[1];
-   let spanT = document.getElementsByClassName("close")[2];
-   let spanS = document.getElementsByClassName("close")[3];
-   let spanW = document.getElementsByClassName("close")[4];
-//    let vidim = document.getElementsByClassName("vidim")[0];
-//    let ne = document.getElementsByClassName("ne")[0];
-
-//     vidim.onclick = function () {
-//         vidim.style.display = "none";
-//         ne.style.display = "block"
-//     }
-
-//     ne.onclick = function () {
-//         vidim.style.display = "block";
-//         ne.style.display = "none"
-//     }
-
-
-    // When the user clicks the button, open the modal 
+   let spanW = document.getElementsByClassName("close")[1];
+   let spanS = document.getElementsByClassName("close")[2];
+   let spanT = document.getElementsByClassName("close")[3];
+   let spanH = document.getElementsByClassName("close")[4];
 
     btn.onclick = function () {
         modal.style.display = "block";
