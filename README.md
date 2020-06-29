@@ -53,7 +53,6 @@ This app will consist of 4 images that represent types of power plants. It will 
 * JavaScript 
 * HTML5 
 * CSS5 
-* D3
 
 
 
