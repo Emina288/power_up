@@ -74,8 +74,18 @@ body {
   margin: auto;
   padding: 20px;
   border: 1px solid #ffc1c1;
-  width: 80%;
+  width: 50%;
 }
+
+.modal-content h1 {
+  text-align: center;
+}
+
+.modal-content p {
+  text-align: center;
+}
+
+
 
 
 /* The Close Button */
@@ -110,14 +120,15 @@ body {
   float: left;
   padding: 20px;
   padding-left: 0;
-  width: 70%;
-  height: 90%;
+  width: 55%;
+  height: 80%;
   display: block;
   background-color: #fffffff7;
   margin: 100px 0 100px 100px;
   border-radius: 10px; 
   overflow: scroll;
   position: absolute;
+  left: 18%;
 }
 
 .power-content h2 {
@@ -253,7 +264,7 @@ div[class^="plant"]:hover {
     height: 500px;
     width: 10000px;
     background-repeat: no-repeat;
-    margin-top: 280px;
+    margin-top: 184px;
     margin-right: auto;
     animation: box 3s infinite;
     border-radius:0 0 0 10px;
@@ -279,10 +290,11 @@ div[class^="plant"]:hover {
     height: 500px;
     width: 1000px;
     background-repeat: no-repeat;
-    margin-top: 340px;
+    margin-top: 250px;
     margin-right: auto;
     animation: box2 3s infinite;
     border-radius:0 0 0 10px;
+    
 }
 
 
@@ -299,21 +311,32 @@ div[class^="plant"]:hover {
   }
 }
 
-.power-content1 {
-  background-color: blueviolet;
+.power-content1{
+  background-color: #afdff5;
   float: left;
   padding: 40px;
-  width: 70%;
+  width: 50%;
   display: block;
   border-radius: 10px; 
   overflow: scroll;
   position: absolute;
-  left: 15%;
+  left: 26%;
+}
+
+.power-content1 img, .power-content2 img {
+  margin-left: 20%;
 }
 
 .power-content2 {
-  background-color: crimson;
-  width: 70%;
+  background-color: #ece17cf5;
+  float: left;
+  padding: 40px;
+  width: 50%;
+  display: block;
+  border-radius: 10px; 
+  overflow: scroll;
+  position: absolute;
+  left: 26%;
 }
 
 
