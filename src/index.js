@@ -5,6 +5,8 @@ window.addEventListener("DOMContentLoaded", () => {
    let hydroModal = document.getElementById("hydroModal");
    let thermoModal = document.getElementById("thermoModal");
    let solarModal = document.getElementById("solarModal");
+   let sound = document.getElementsByClassName("audio")
+   console.log(sound)
 
 
     // Get the button that opens the modal
@@ -24,6 +26,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
     btn.onclick = function () {
         modal.style.display = "block";
+        sound[0].currentTime = 0;
+        sound[0].play();
+
     }
 
     hbtn.onclick = function () {

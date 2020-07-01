@@ -49,11 +49,6 @@ body {
     color: black;
 }
 
-.side ul li button {
-    color: #d69215;
-    background-color: black;
-}
-
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -339,6 +334,26 @@ div[class^="plant"]:hover {
   left: 26%;
 }
 
+#myBtn {
+  font-size: 50px;
+   animation: flash 1s infinite;
+}
+
+@keyframes flash {
+  0% {
+    color: #f2f2df;
+  }
+
+  50% {
+    color: black;
+    font-size: 50px;
+  }
+
+  100% {
+    color: #aaaa13;
+    top:100px;
+  }
+}
 
 
 
