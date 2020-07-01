@@ -6,7 +6,6 @@ window.addEventListener("DOMContentLoaded", () => {
    let thermoModal = document.getElementById("thermoModal");
    let solarModal = document.getElementById("solarModal");
    let sound = document.getElementsByClassName("audio")
-   console.log(sound)
 
 
     // Get the button that opens the modal

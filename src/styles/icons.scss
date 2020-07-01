@@ -1,0 +1,71 @@
+#myBtn {
+  font-size: 50px;
+   animation: flash 1s infinite;
+}
+
+@keyframes flash {
+  0% {
+    color: #f2f2df;
+  }
+
+  50% {
+    color: black;
+    font-size: 50px;
+  }
+
+  100% {
+    color: #aaaa13;
+    top:100px;
+  }
+}
+
+.mail a:hover {
+  color: #ff2f2fa3;
+}
+
+.mail:hover {
+  animation: spinAround 2s linear;
+}
+
+@keyframes spinAround {
+	from {
+		transform: rotate(0deg)
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.git a:hover {
+  color: #2d02cadc;
+}
+
+.git:hover {
+  animation: turnAround 2s linear;
+}
+
+@keyframes turnAround {
+	from {
+		transform: rotateX(0deg)
+	}
+	to {
+		transform: rotateX(360deg);
+	}
+}
+
+.link a:hover {
+  color: #85e20cf8;
+}
+
+.link:hover {
+  animation: switchAround 2s linear;
+}
+
+@keyframes switchAround {
+	from {
+		transform: rotateY(0deg)
+	}
+	to {
+		transform: rotateY(360deg);
+	}
+}

@@ -1,3 +1,5 @@
+@import url("icons.scss");
+
 * {
   box-sizing: border-box;
 }
@@ -65,11 +67,13 @@ body {
 
 /* Modal Content */
 .modal-content {
-  background-color: #cca1a1;
+  background-color: #ececec;
   margin: auto;
   padding: 20px;
-  border: 1px solid #ffc1c1;
+  border: 1px solid #1d1a1a;
   width: 50%;
+  border-radius: 4px;
+  margin-top: 200px;
 }
 
 .modal-content h1 {
@@ -334,26 +338,7 @@ div[class^="plant"]:hover {
   left: 26%;
 }
 
-#myBtn {
-  font-size: 50px;
-   animation: flash 1s infinite;
-}
 
-@keyframes flash {
-  0% {
-    color: #f2f2df;
-  }
-
-  50% {
-    color: black;
-    font-size: 50px;
-  }
-
-  100% {
-    color: #aaaa13;
-    top:100px;
-  }
-}
 
 
 
