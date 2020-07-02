@@ -23,6 +23,11 @@ body {
 
 }
 
+.title h2 {
+  color: #2e3e46;
+  font-family: 'Yellowtail', cursive;
+}
+
 .main-content {
   position: absolute;
 }
@@ -148,10 +153,11 @@ div[class^="plant"] {
     margin: 10px;
     cursor: pointer;
     border: 2px solid black;
+    border-radius: 50px;
 }
 
 div[class^="plant"]:hover {
-    transform: scale(1.5);
+    transform: scale(1.2);
 }
 
 .plant-hydro {
@@ -314,7 +320,8 @@ div[class^="plant"]:hover {
   background-color: #afdff5;
   float: left;
   padding: 40px;
-  width: 50%;
+  width: 800px;
+  height: 700px;
   display: block;
   border-radius: 10px; 
   overflow: scroll;
@@ -330,7 +337,8 @@ div[class^="plant"]:hover {
   background-color: #ece17cf5;
   float: left;
   padding: 40px;
-  width: 50%;
+  width: 800px;
+  height: 700px;
   display: block;
   border-radius: 10px; 
   overflow: scroll;

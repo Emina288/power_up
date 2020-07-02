@@ -5,8 +5,10 @@ window.addEventListener("DOMContentLoaded", () => {
    let hydroModal = document.getElementById("hydroModal");
    let thermoModal = document.getElementById("thermoModal");
    let solarModal = document.getElementById("solarModal");
-   let sound = document.getElementsByClassName("audio")
-
+   let sound = document.getElementsByClassName("audio");
+//    let canvas = document.getElementById("canvas1");
+//    let c = canvas.getContext("2d");
+//    let img = document.getElementById("")
 
     // Get the button that opens the modal
    let btn = document.getElementById("myBtn");
@@ -72,6 +74,74 @@ window.addEventListener("DOMContentLoaded", () => {
             event.target.style.display = "none";
         }
     }
+
+    var x = 10;
+    var y = 50;
+    var dx = 5;
+
+
+
+
+    // function anime() {
+    //     requestAnimationFrame(anime);
+    //     c.clearRect(0, 0, innerWidth, innerHeight);
+    //     c.beginPath();
+    //     c.moveTo(x, y);
+    //     c.lineTo(x+70,y);
+    //     c.lineTo(x+70,y-20);
+    //     c.lineTo(x+90, y+15);
+    //     c.lineTo(x+70,y+50);
+    //     c.lineTo(x+70,y+30);
+    //     c.lineTo(x,y+30)
+    //     c.closePath();
+    //     c.strokeStyle = "red";
+    //     c.stroke();
+
+    //     if (x > 600 ) {
+    //        x = 10;
+    //     } else {
+
+    //     x += dx;
+    //     }
+
+    // }
+
+    // anime();
+
+    // c.beginPath();
+    // c.moveTo(10,200);
+    // c.lineTo(200, 180);
+    // c.lineTo(200, 220);
+    // c.closePath();
+    // c.strokeStyle = "black"
+    // c.stroke();
+
+    // c.beginPath();
+    // c.arc(240,200,40, 0, Math.PI * 2, false);
+    // c.strokeStyle = "black"
+    // c.stroke();
+
+    // c.beginPath();
+    // c.moveTo(220, 0);
+    // c.lineTo(180, 190);
+    // c.lineTo(220, 190);
+    // c.closePath();
+    // c.strokeStyle = "black"
+    // c.stroke();
+
+    // c.beginPath();
+    // c.moveTo(10, 50);
+    // c.lineTo(80,50);
+    // c.lineTo(80,30);
+    // c.lineTo(100, 65);
+    // c.lineTo(80,100);
+    // c.lineTo(80,80);
+    // c.lineTo(10,80)
+    // c.closePath();
+    // c.strokeStyle = "red";
+    // c.stroke();
+
+    
 
 })
 

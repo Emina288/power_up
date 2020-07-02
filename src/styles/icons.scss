@@ -69,3 +69,20 @@
 		transform: rotateY(360deg);
 	}
 }
+
+.light {
+    width: 300px;
+    height: 300px;
+    animation: light 2s infinite;
+}
+
+@keyframes light {
+    from {
+        background-image: url(/src/images/bele.png);
+        background-repeat: no-repeat;
+    }
+    to {
+        background-image: url(/src/images/zuta.png);
+         background-repeat: no-repeat;
+    }
+}
