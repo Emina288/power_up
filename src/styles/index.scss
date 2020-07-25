@@ -98,6 +98,8 @@ body {
   float: right;
   font-size: 28px;
   font-weight: bold;
+  position: relative;
+  left: -20px;
 }
 
 
@@ -122,12 +124,10 @@ body {
 
 .power-content {
   float: left;
-  padding: 20px;
-  padding-left: 0;
-  width: 55%;
-  height: 80%;
+  width: 800px;
+  height: 580px;
   display: block;
-  background-color: #fffffff7;
+  background-color: #167d3af7;
   margin: 100px 0 100px 100px;
   border-radius: 10px; 
   overflow: scroll;
@@ -135,8 +135,8 @@ body {
   left: 18%;
 }
 
-.power-content h2 {
-    margin-left: 20px;
+.power-content img {
+    margin: 5%;
 }
 
 .power-plants {
@@ -317,11 +317,10 @@ div[class^="plant"]:hover {
 }
 
 .power-content1{
-  background-color: #afdff5;
+  background-color: #fdfdfd;
   float: left;
-  padding: 40px;
   width: 800px;
-  height: 700px;
+  height: 580px;
   display: block;
   border-radius: 10px; 
   overflow: scroll;
@@ -329,16 +328,21 @@ div[class^="plant"]:hover {
   left: 26%;
 }
 
-.power-content1 img, .power-content2 img {
-  margin-left: 20%;
+.power-content1 img {
+  margin: 5%;
+  border-radius: 20px;
+}
+
+
+.power-content2 img {
+ margin: 5%;
 }
 
 .power-content2 {
-  background-color: #ece17cf5;
+  background-color: #fffef7;
   float: left;
-  padding: 40px;
-  width: 800px;
-  height: 700px;
+   width: 800px;
+  height: 580px;
   display: block;
   border-radius: 10px; 
   overflow: scroll;

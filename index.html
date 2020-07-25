@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/konva@7.0.3/konva.min.js"></script>
+    <script src="https://unpkg.com/gifler@0.1.0/gifler.min.js"></script>
     <title>Document</title>
 </head>
 
@@ -65,233 +67,31 @@
         </div>
 
         <div id="windModal" class="modal">
-            <div class="power-content1">
+            <div class="power-content1" id="test">
                 <span class="close">&times;</span>
-                <h1>Wind power plant</h1>
-                <p>Wind energy is the fastest growing mode of electricity production across the planet.It is the most widely
-                    used source of renewable enegry. Wind energy is a clean source of power that causes minimal pollution and
-                    mass production!</p>
-                <h2>How do they work?</h2>
-                <ol>
-                    <li>Wind blows past a wind turbine</li>
-                    <li>The blades of a wind turbine captures the wind's kinetic energy and rotate, turning the kinetic energy
-                        into mechanical energy!</li>
-                    <li>The rotation turns an internal shaft connected to a gearbox, which increases the speed of rotation by a
-                        factor of 100!</li>
-                    <li>That spins a rotor in a generator that produces electricity</li>
-                </ol>
-                <img src="./src/images/windy.jpg">
+                <!-- <canvas id="myCanvas" width="600" height="600"></canvas> -->
+                <img src="src/new-wind.gif" id="ig"  width="700" height="500"/>
             </div>
         </div>
 
         <div id="solarModal" class="modal">
             <div class="power-content2">
                 <span class="close">&times;</span>
-                <h1>Solar power plant</h1>
-                <p>Solar power has so much potential that there is enough solar energy hitting the Earth every hour to meet all of
-                humanity's power needs for the entire year. It is a 100% clean, renewable energy source. The best part is that the cost
-                of solar panels has dropped in recent years, more than 70% in the last decade so installing solar panels in any
-                household brings so many benefits, for the client as well as the environment! </p>
-                <h2>How do they work?</h2>
-                <ol>
-                    <li>The silicon photovoltaic solar cell absorbs solar radiation </li>
-                   <li>When the sun’s rays interact with the silicon cell, electrons begin to move, creating a flow of electric current</li>
-                    <li>Wires capture and feed this direct current (DC) electricity to a solar inverter to be converted to alternating current
-                    (AC) electricity </li>
-                </ol>
-                <img id="scream" src="./src/images/solary.jpg">
-                
+                <img src='./src/solar.gif' width="700" height="500" />
             </div>
         </div>
 
     <div id="thermoModal" class="modal">
-        <div class="power-content" style="background-color: #ffffff;">
+        <div class="power-content" style="background-color: #c0e1f9;">
             <span class="close">&times;</span>
-            <h2>Thermal generation of total electricity production</h2>
-            <div class="verticalChart">
-                <div class="singleBar">
-                    <div class="bar">
-                        <div class="value2" style="height: 59%;">
-                            <span>59%</span>
-                        </div>
-                    </div>
-                    <div class="titleG">China</div>
-                </div>
-                <div class="singleBar">
-                    <div class="bar">
-                        <div class="value2" style="height: 8.5%;">
-                            <span>8.5%</span>
-                        </div>
-                    </div>
-                    <div class="titleG">Canada</div>
-                </div>
-                <div class="singleBar">
-                    <div class="bar">
-                        <div class="value2" style="height: 38%;">
-                            <span>38%</span>
-                        </div>
-                    </div>
-                    <div class="titleG">Brazil</div>
-                </div>
-                <div class="singleBar">
-                    <div class="bar">
-                        <div class="value2" style="height: 83%;">
-                            <span>83%</span>
-                        </div>
-                    </div>
-                    <div class="titleG">United States</div>
-                </div>
-                <div class="singleBar">
-                    <div class="bar">
-                        <div class="value2" style="height: 68%;">
-                            <span>68%</span>
-                        </div>
-                    </div>
-                    <div class="titleG">Russia</div>
-                </div>
-                <div class="singleBar">
-                    <div class="bar">
-                        <div class="value2" style="height: 67%;">
-                            <span>67%</span>
-                        </div>
-                    </div>
-                    <div class="titleG">India</div>
-                </div>
-                <div class="singleBar">
-                    <div class="bar">
-                        <div class="value2" style="height: 2.4%;">
-                            <span>2.4%</span>
-                        </div>
-                    </div>
-                    <div class="titleG">Norway</div>
-                </div>
-                <div class="singleBar">
-                    <div class="bar">
-                        <div class="value2" style="height: 70%;">
-                            <span>70%</span>
-                        </div>
-                    </div>
-                    <div class="titleG">Turkey</div>
-                </div>
-                <div class="singleBar">
-                    <div class="bar">
-                        <div class="value2" style="height: 83%;">
-                            <span>83%</span>
-                        </div>
-                    </div>
-                    <div class="titleG">Japan</div>
-                </div>
-                <div class="singleBar">
-                    <div class="bar">
-                        <div class="value2" style="height: 36%;">
-                            <span>36%</span>
-                        </div>
-                    </div>
-                    <div class="titleG">Venezuela</div>
-        
-                </div>
-                <div class="thermo-div">
-                    <div class="thermo-img">
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
+            <img src='./src/termo.gif' width="700" height="500" />
         </div>
     </div>
     <div id="hydroModal" class="modal">
         <div class="power-content">
             <span class="close">&times;</span>
-            <h2>Hydropower generation of total electricity production</h2>
-            <div class="verticalChart">
-                <div class="singleBar">
-                    <div class="bar">
-                        <div class="value" style="height: 20%;">
-                            <span style="color: rgb(45, 137, 239); display: inline;">20%</span>
-                        </div>
-                    </div>
-                    <div class="titleG">China</div>
-                </div>
-                <div class="singleBar">
-                    <div class="bar">
-                        <div class="value" style="height: 25.7%;">
-                            <span style="color: rgb(45, 137, 239); display: inline;">25.7%</span>
-                        </div>
-                    </div>
-                    <div class="titleG">Canada</div>
-                </div>
-                <div class="singleBar">
-                    <div class="bar">
-                        <div class="value" style="height: 65%;">
-                            <span style="color: rgb(45, 137, 239); display: inline;">65%</span>
-                        </div>
-                    </div>
-                    <div class="titleG">Brazil</div>
-                </div>
-                <div class="singleBar">
-                    <div class="bar">
-                        <div class="value" style="height: 10%;">
-                            <span style="color: rgb(45, 137, 239); display: inline;">10%</span>
-                        </div>
-                    </div>
-                    <div class="titleG">United States</div>
-                </div>
-                <div class="singleBar">
-                    <div class="bar">
-                        <div class="value" style="height: 20%;">
-                            <span style="color: rgb(45, 137, 239); display: inline;">20%</span>
-                        </div>
-                    </div>
-                    <div class="titleG">Russia</div>
-                </div>
-                <div class="singleBar">
-                    <div class="bar">
-                        <div class="value" style="height: 26%;">
-                            <span style="color: rgb(45, 137, 239); display: inline;">26%</span>
-                        </div>
-                    </div>
-                    <div class="titleG">India</div>
-                </div>
-                <div class="singleBar">
-                    <div class="bar">
-                        <div class="value" style="height: 95%;">
-                            <span style="color: rgb(45, 137, 239); display: inline;">95%</span>
-                        </div>
-                    </div>
-                    <div class="titleG">Norway</div>
-                </div>
-                <div class="singleBar">
-                    <div class="bar">
-                        <div class="value" style="height: 22.8%;">
-                            <span style="color: rgb(45, 137, 239); display: inline;">22.8%</span>
-                        </div>
-                    </div>
-                    <div class="titleG">Turkey</div>
-                </div>
-                <div class="singleBar">
-                    <div class="bar">
-                        <div class="value" style="height: 8%;">
-                            <span style="color: rgb(45, 137, 239); display: inline;">8%</span>
-                        </div>
-                    </div>
-                    <div class="titleG">Japan</div>
-                </div>
-                <div class="singleBar">
-                    <div class="bar">
-                        <div class="value" style="height: 64%;">
-                            <span style="color: rgb(45, 137, 239); display: inline;">64%</span>
-                        </div>
-                    </div>
-                    <div class="titleG">Venezuela</div>
-    
-                </div>
-                <div class="hydro-div">
-                    <div class="hydro-img">
-                        <div class="item">
-                        </div>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
+            <img src='./src/hydro-top.gif' width="700" height="500" />
+
         </div>
     </div>
 </div>
