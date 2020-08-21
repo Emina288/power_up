@@ -125,7 +125,6 @@ body {
   display: block;
   margin: 100px 0 100px 100px;
   border-radius: 10px; 
-  overflow: scroll;
   position: absolute;
   left: 18%;
 }
@@ -294,19 +293,6 @@ div[class^="plant"]:hover {
 }
 
 
-@keyframes box2 {
-  0% {
-      background-image: url(../images/kraj1.png);
-  }
-  50% {
-      background-image: url(../images/kraj2.png);
-  }
-
-  100% {
-      background-image: url(../images/kraj3.png);
-  }
-}
-
 .power-content1{
   background-color: #fdfdfd;
   float: left;
@@ -421,7 +407,7 @@ div[class^="plant"]:hover {
 }
 
 .light1 {
-  animation: slide1 3s ease-in-out infinite;
+  animation: slide1 1s ease-in-out infinite;
 }
 
 @keyframes slide1 {
@@ -436,7 +422,7 @@ div[class^="plant"]:hover {
 }
 
 .arrow2 {
-  animation: slide2 3s ease-in-out infinite;
+  animation: slide2 1s ease-in-out infinite;
 }
 
 @keyframes slide2 {
@@ -451,7 +437,7 @@ div[class^="plant"]:hover {
 }
 
 .arrow3 {
-   animation: slide3 3s ease-in-out infinite;
+   animation: slide3 1s ease-in-out infinite;
 }
 
 @keyframes slide3 {
@@ -466,7 +452,7 @@ div[class^="plant"]:hover {
 }
 
 .arrow4 {
-   animation: slide4 3s ease-in-out infinite;
+   animation: slide4 1s ease-in-out infinite;
 }
 
 @keyframes slide4 {
@@ -487,7 +473,7 @@ div[class^="plant"]:hover {
     position: relative;
     right: -584px;
     top: 256px;
-    animation: slide5 3s ease-in-out infinite;
+    animation: slide5 1s ease-in-out infinite;
     cursor: pointer;
 }
 
@@ -512,6 +498,171 @@ div[class^="plant"]:hover {
     transition: background 0.5s;
   }
 }
+
+.animate span {
+    display: inline-block;
+}
+
+
+.animate span:nth-of-type(2) {
+    animation-delay: .05s;
+}
+.animate span:nth-of-type(3) {
+    animation-delay: .1s;
+}
+.animate span:nth-of-type(4) {
+    animation-delay: .15s;
+}
+.animate span:nth-of-type(5) {
+    animation-delay: .2s;
+}
+.animate span:nth-of-type(6) {
+    animation-delay: .25s;
+}
+.animate span:nth-of-type(7) {
+    animation-delay: .3s;
+}
+.animate span:nth-of-type(8) {
+    animation-delay: .35s;
+}
+.animate span:nth-of-type(9) {
+    animation-delay: .4s;
+}
+.animate span:nth-of-type(10) {
+    animation-delay: .45s;
+}
+.animate span:nth-of-type(11) {
+    animation-delay: .5s;
+}
+.animate span:nth-of-type(12) {
+    animation-delay: .55s;
+}
+.animate span:nth-of-type(13) {
+    animation-delay: .6s;
+}
+.animate span:nth-of-type(14) {
+    animation-delay: .65s;
+}
+.animate span:nth-of-type(15) {
+    animation-delay: .7s;
+}
+.animate span:nth-of-type(16) {
+    animation-delay: .75s;
+}
+.animate span:nth-of-type(17) {
+    animation-delay: .8s;
+}
+.animate span:nth-of-type(18) {
+    animation-delay: .85s;
+}
+.animate span:nth-of-type(19) {
+    animation-delay: .9s;
+}
+.animate span:nth-of-type(20) {
+    animation-delay: .95s;
+}
+
+.seven span {
+    color: #2e3e46;
+    font-family: 'Yellowtail', cursive;
+    opacity: 0;
+    transform: translate(-150px, 0) scale(.3);
+    animation: leftRight .5s forwards;
+}
+
+
+@keyframes leftRight {
+    40% {
+        transform: translate(50px, 0) scale(.7);
+        opacity: 1;
+        color: #7d6071
+    }
+
+    60% {
+        color: #0f40ba;
+    }
+
+    80% {
+        transform: translate(0) scale(2);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0) scale(1);
+        opacity: 1;
+    }
+}
+
+.back-thermo {
+  background-image: url(../images/kraj1.png);
+  background-repeat: no-repeat;
+  height: 511px;
+}
+
+.moreBtn, .lessBtn {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  top: 456px;
+}
+
+.lessBtn {
+  top: 18px;
+  left: -10px;
+}
+
+.back-other {
+  background-image: url(../images/kraj3.png);
+  background-repeat: no-repeat;
+  height: 511px;
+}
+
+.text1, .text2, .text3 {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  top: 287px;
+  left: -49px;
+}
+
+.text2 {
+  top: -84px;
+}
+
+.text3 {
+  top: -258px;
+  left: 310px;
+}
+
+.moreBtn button, .lessBtn button {
+  color: #438a83;
+  font-family: monospace;
+  font-size: 22px;
+  background: #fdff64;
+  padding: 6px;
+  border: 4px solid #1a1d1b !important;
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+.moreBtn button:hover, .lessBtn button:hover {
+  color: #494949 !important;
+  border-radius: 50px;
+  border-color: #859c1a !important;
+  background-color: rgb(223, 86, 86);
+  transition: all 0.3s ease 0s;
+}
+
+.p-thermo {
+  text-align: left;
+  width: 334px;
+  height: 114px;
+  background-color: #ffeb0094;
+}
+
+
 
 
 

@@ -17,7 +17,13 @@
 
 <body>
     <header class="title">
-    <h2>Electrical Energy</h2>
+    <h2>
+        <div class="animate seven">
+            <span>E</span><span>l</span><span>e</span><span>c</span><span>t</span><span>r</span><span>i</span><span>c</span><span>a</span><span>l</span>
+            &nbsp;
+            <span>E</span><span>n</span><span>e</span><span>r</span><span>g</span><span>y</span>
+        </div>
+    </h2>
     </header>
     
     <div class="main-content">
@@ -85,7 +91,18 @@
     <div id="thermoModal" class="modal">
         <div class="power-content" style="background-color: #c0e1f9;">
             <span class="close">&times;</span>
-            <img src='./src/termo.gif' width="700" height="500" />
+            <div class="back-thermo" id="back">
+                <div class="text1"><p class="p-thermo">Water floating at hight speed is being directed towards a generator where the potential energy of water is gonna be
+                transformed into mechanical energy by spinning the turbine on the generator</p></div>
+                <div class="text2"><p class="p-thermo">The turbine is connected to the electromagnetic generator which produces electricity when the turbine spins</p></div>
+                <div class="text3"><p class="p-thermo">Once electricity is produced, it is being transformed into a high voltage power and gets distributed to the consumers</p></div>
+                <div class="moreBtn">
+                <button id="more">More...</button>
+                </div>
+                <div class="lessBtn">
+                <button id="less">Less..</button>
+                </div>
+            </div>
         </div>
     </div>
     <div id="hydroModal" class="modal">

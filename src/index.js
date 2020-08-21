@@ -7,6 +7,40 @@ window.addEventListener("DOMContentLoaded", () => {
    let thermoModal = document.getElementById("thermoModal");
    let solarModal = document.getElementById("solarModal");
    let sound = document.getElementsByClassName("audio");
+   let thermo1 = document.getElementsByClassName("p-thermo")[0];
+   let thermo2 = document.getElementsByClassName("p-thermo")[1];
+   let thermo3 = document.getElementsByClassName("p-thermo")[2];
+    let moreThermo= document.getElementById("more");
+    let lessThermo = document.getElementById("less");
+   let backThermo = document.getElementById("back")
+
+
+    thermo1.style.display = "none";
+    thermo2.style.display = "none";
+    thermo3.style.display = "none";
+    lessThermo.style.display = "none";
+
+    moreThermo.onclick = function () {
+    thermo1.style.display = "block";
+    thermo2.style.display = "block";
+    thermo3.style.display = "block";
+    lessThermo.style.display = "block";
+    moreThermo.style.display ="none"
+    backThermo.classList.remove("back-thermo");
+    backThermo.classList.add("back-other");
+      
+    };
+
+    lessThermo.onclick = function () {
+      thermo1.style.display = "none";
+      thermo2.style.display = "none";
+      thermo3.style.display = "none";
+      lessThermo.style.display = "none";
+      moreThermo.style.display = "block";
+      backThermo.classList.remove("back-other");
+      backThermo.classList.add("back-thermo");
+    };
+
     // var canvas = document.getElementById("myCanvas");
     // var ctx = canvas.getContext("2d");
     // ctx.beginPath();
@@ -72,7 +106,7 @@ window.addEventListener("DOMContentLoaded", () => {
      // direction, and the speed.
 
      img.src =
-       "https://i.pinimg.com/originals/0d/16/0d/0d160d3e084cd39eb893d764dad3fd3d.jpg";
+       "https://www.evolutionmeasurement.com/wp-content/uploads/2016/08/iStock_31889096_XXXLARGE-800x200.jpg";
      var CanvasXSize = 800;
      var CanvasYSize = 700;
      var speed = 40; // lower is faster
@@ -225,8 +259,6 @@ window.addEventListener("DOMContentLoaded", () => {
             event.target.style.display = "none";
         }
     }
-
-    // canvasBack.style.background = "red"
 
 });
 
