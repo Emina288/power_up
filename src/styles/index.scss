@@ -1,4 +1,5 @@
 @import url("icons.scss");
+@import url("hydro_chart.scss");
 
 * {
   box-sizing: border-box;
@@ -13,14 +14,11 @@ body {
   background-position: center;
   background-repeat: no-repeat; 
 }
-
-/* Style the header */
 .title {
   padding: 30px;
   text-align: center;
   font-size: 35px;
   background-color: #ffececb3;
-
 }
 
 .title h2 {
@@ -32,16 +30,12 @@ body {
   position: absolute;
 }
 
-
-
-/* Create two columns/boxes that floats next to each other */
 .side {
   float: left;
   padding: 20px;
   margin: 200px 0 0 30px;
 }
 
-/* Style the list inside the menu */
 .side ul {
   list-style-type: none;
   padding: 0;
@@ -57,20 +51,19 @@ body {
 }
 
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  display: none; 
+  position: fixed; 
+  z-index: 1;
+  padding-top: 100px;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);
 }
 
-/* Modal Content */
 .modal-content {
   background-color: #ececec;
   margin: auto;
@@ -89,7 +82,6 @@ body {
   text-align: center;
 }
 
-/* The Close Button */
 .close {
   color: #5a5555;
   float: right;
@@ -117,17 +109,7 @@ body {
   overflow: hidden;
   position: relative;
   left: 30%;
-}
-
-.power-content {
-  float: left;
-  width: 800px;
-  display: block;
-  margin: 100px 0 100px 100px;
-  border-radius: 10px; 
-  position: absolute;
-  left: 18%;
-}
+} 
 
 .power-plants {
     display: inline-block;
@@ -167,336 +149,22 @@ div[class^="plant"]:hover {
     background-image: url('../images/wind.jpg');
 }
 
-
-
-/* Clear floats after the columns */
 .main-content:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
 @media (max-width: 600px) {
   .side, .content {
     width: 100%;
     height: auto;
   }
 }
-
-/* bar chart */ 
-
-.verticalChart {
-  width:100%;
-  .singleBar {
-    width:8%;
-    float:left;
-    margin-left:0.8%;
-    margin-right:1%;
-    .bar {
-      position:relative;
-      height:100px;
-      background:#67708630;
-      overflow:hidden;
-      .value {
-        position:absolute;
-        bottom:0;
-        width:100%;
-        background:#88e4cb;
-        span {
-          position:absolute;
-          font-size:12px;
-          bottom:0;
-          width:100%;
-          height:20px;
-          color:#dddddd;
-          text-shadow:0px -1px 0px #380046, 0px 1px 0px #ffffff;
-          display:none;
-          text-align:center;
-        }
-      }
-    }
-
-    .value2 {
-      position:absolute;
-        bottom:0;
-        width:100%;
-        background:#88b2d6
-    }
-
-    .value2 span {
-         position:absolute;
-          font-size:12px;
-          bottom: 10px;
-          left: 47px;
-          display:inline;
-    }
-
-    .titleG {
-      margin-top:5px;
-      text-align:center;
-      color: black;
-    }
-  }
-}
-
-.hydro-div {
-    display: block;
-    width: 95%;
-    position: relative;
-}
-
-.thermo-div {
-    display: block;
-    width: 95%;
-    position: relative;
-
-}
-
-.hydro-img {
-    position: absolute;
-    display: block;
-    height: 500px;
-    width: 10000px;
-    background-repeat: no-repeat;
-    margin-top: 184px;
-    margin-right: auto;
-    animation: box 3s infinite;
-    border-radius:0 0 0 10px;
-}
-
-
-@keyframes box {
-  0% {
-      background-image: url(../images/ajde0.png);
-  }
-  50% {
-      background-image: url(../images/ajde1.png);
-  }
-
-  100% {
-      background-image: url(../images/ajde1.png);
-  }
-}
-
-.thermo-img {
-    position: absolute;
-    display: block;
-    height: 500px;
-    width: 1000px;
-    background-repeat: no-repeat;
-    margin-top: 250px;
-    margin-right: auto;
-    animation: box2 3s infinite;
-    border-radius:0 0 0 10px;
-    
-}
-
-
-.power-content1{
-  background-color: #fdfdfd;
-  float: left;
-  width: 800px;
-  height: 580px;
-  display: block;
-  border-radius: 10px; 
-  overflow: scroll;
+  
+.power-content {
   position: absolute;
   left: 26%;
-}
-
-.power-content1 img {
-  margin: 5%;
-  border-radius: 20px;
-}
-
-
-.power-content2 img {
- margin: 5%;
-}
-
-.power-content2 {
-  background-color: #fffef7;
-  float: left;
-   width: 800px;
-  height: 580px;
-  display: block;
-  border-radius: 10px; 
-  overflow: scroll;
-  position: absolute;
-  left: 26%;
-}
-
-.back {
-  background-image: url(../images/ajde0.png);
-  background-repeat: no-repeat;
-  height: 700px;
-}
-
-.itemText, .itemText2, .itemText3 {
-  display: none;
-  font-size: 16px;
-  padding: 7px;
-}
-
-.item:hover, .item2:hover, .item3:hover {
-  .itemText{
-    display: block;
-    width: 200px;
-    background-color: yellow;
-    position: absolute;
-    z-index: 1;
-    font-size: 16px;
-    padding: 7px;
-    text-align: left;
-  }
-}
-
-.item4:hover, .item5:hover, .item6:hover {
-  .itemText3{
-    display: block;
-    width: 200px;
-    background-color: red;
-    position: absolute;
-    z-index: 1;
-  }
-}
-
-.item, .item2, .item3 {
-  width: 100px;
-  height: 50px;
-  margin: 10px;
-  position: relative;
-  font-size: 62px;
-    left: 103px;
-    top: 158px;
-    cursor: pointer;
-}
-
-.item2 {
-  left: 266px;
-  top: 212px;
-
-}
-
-.item3 {
-  left: 434px;
-  top: 276px;
-}
-
-.item4, .item5, .item6  {
-  display: inline-block;
-  font-size: 62px;
-  color: #d8d85d;
-  position: relative;
-  top: -6px;
-  right: -526px;
-  cursor: pointer;
-}
-
-.item5 {
-  top: -87px;
-  right: -354px;
-
-}
-
-.item6 {
-  top: -154px;
-  right: -171px;
-
-}
-
-.light1 {
-  animation: slide1 1s ease-in-out infinite;
-}
-
-@keyframes slide1 {
-  0%,
-  100% {
-    transform: translate(12px, 3px) rotate(25deg);
-  }
-
-  50% {
-    transform: translate(-8px, -8px) rotate(25deg);
-  }
-}
-
-.arrow2 {
-  animation: slide2 1s ease-in-out infinite;
-}
-
-@keyframes slide2 {
-  0%,
-  100% {
-    transform: translate(0, 0) rotate(25deg);
-  }
-
-  50% {
-    transform: translate(20px, 11px) rotate(25deg);
-  }
-}
-
-.arrow3 {
-   animation: slide3 1s ease-in-out infinite;
-}
-
-@keyframes slide3 {
-  0%,
-  100% {
-    transform: translate(0, 0) rotate(37deg);
-  }
-
-  50% {
-    transform: translate(20px, 11px) rotate(37deg);
-  }
-}
-
-.arrow4 {
-   animation: slide4 1s ease-in-out infinite;
-}
-
-@keyframes slide4 {
-  0%,
-  100% {
-    transform: translate(0, 0) rotate(37deg);
-  }
-
-  50% {
-    transform: translate(20px, 11px) rotate(7deg);
-  }
-}
-
-.box {
-    background-color: #8a8484;
-    height: 32px;
-    width: 114px;
-    position: relative;
-    right: -584px;
-    top: 256px;
-    animation: slide5 1s ease-in-out infinite;
-    cursor: pointer;
-}
-
-.box:hover {
-  .itemText2 {
-    display: block;
-    width: 200px;
-    background-color: pink;
-    position: absolute;
-    z-index: 1;
-  }
-}
-
-@keyframes slide5 {
-  0%,
-  100% {
-    background: transparent;
-  }
-
-  50% {
-    background: #8a8484;
-    transition: background 0.5s;
-  }
 }
 
 .animate span {
@@ -592,82 +260,4 @@ div[class^="plant"]:hover {
         opacity: 1;
     }
 }
-
-.back-thermo {
-  background-image: url(../images/kraj1.png);
-  background-repeat: no-repeat;
-  height: 511px;
-}
-
-.moreBtn, .lessBtn {
-  display: flex;
-  position: relative;
-  justify-content: center;
-  top: 456px;
-}
-
-.lessBtn {
-  top: 18px;
-  left: -10px;
-}
-
-.back-other {
-  background-image: url(../images/kraj3.png);
-  background-repeat: no-repeat;
-  height: 511px;
-}
-
-.text1, .text2, .text3 {
-  display: flex;
-  position: relative;
-  justify-content: center;
-  top: 287px;
-  left: -49px;
-}
-
-.text2 {
-  top: -84px;
-}
-
-.text3 {
-  top: -258px;
-  left: 310px;
-}
-
-.moreBtn button, .lessBtn button {
-  color: #438a83;
-  font-family: monospace;
-  font-size: 22px;
-  background: #fdff64;
-  padding: 6px;
-  border: 4px solid #1a1d1b !important;
-  border-radius: 6px;
-  display: inline-block;
-  transition: all 0.3s ease 0s;
-  cursor: pointer;
-}
-
-.moreBtn button:hover, .lessBtn button:hover {
-  color: #494949 !important;
-  border-radius: 50px;
-  border-color: #859c1a !important;
-  background-color: rgb(223, 86, 86);
-  transition: all 0.3s ease 0s;
-}
-
-.p-thermo {
-  text-align: left;
-  width: 334px;
-  height: 114px;
-  background-color: #ffeb0094;
-}
-
-
-
-
-
-
-
-
-
 

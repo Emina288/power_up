@@ -1,0 +1,66 @@
+ div#container {
+  width: 1000px;
+  height: 600px;
+  margin: auto;
+  background-color: #1f1714;
+  border-radius: 10px;
+}
+
+.chart {
+  width: 100%;
+  height: 100%;
+}
+
+.bar {
+  fill: #bf8836;
+  cursor: pointer;
+}
+
+text {
+  font-size: 12px;
+  fill: #fff;
+}
+
+path {
+  stroke: gray;
+}
+
+ line {
+  stroke: rgb(165, 40, 40);
+  z-index: 1;
+  stroke-width: 3;
+}
+
+.grid path {
+  stroke-width: 0;
+}
+
+.grid .tick line {
+  stroke: #9FAAAE;
+  stroke-opacity: 0.3;
+}
+
+text.divergence {
+  font-size: 14px;
+  fill: rgb(165, 40, 40);
+  font-weight: bold;
+
+}
+
+text.value {
+  font-size: 14px;
+}
+
+text.title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+text.label {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+text.source {
+  font-size: 10px;
+}
