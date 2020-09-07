@@ -1,5 +1,6 @@
 import "./styles/index.scss";
 import "./hydro.js";
+import "./wind.js";
 
 
 window.addEventListener("DOMContentLoaded", () => {
