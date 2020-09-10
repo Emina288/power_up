@@ -1,58 +1,58 @@
 const sample = [
   {
     country: "Russia",
-    value: 0.08,
+    value: 16.0,
     color: "#000000",
   },
   {
     country: "Canada",
-    value: 5.0,
+    value: 60.0,
     color: "#00a2ee",
   },
   {
     country: "China",
-    value: 4.0,
+    value: 20.0,
     color: "#fbcb39",
   },
   {
     country: "United States",
-    value: 7.3,
+    value: 6.6,
     color: "#007bc8",
   },
   {
     country: "Brazil",
-    value: 9.2,
+    value: 70.0,
     color: "#65cedb",
   },
   {
     country: "Australia",
-    value: 8.5,
+    value: 7,
     color: "#ff6e52",
   },
   {
     country: "India",
-    value: 10.0,
+    value: 26.0,
     color: "#f9de3f",
   },
   {
     country: "Argentina",
-    value: 2.4,
+    value: 7.3,
     color: "#5d2f8e",
   },
   {
     country: "Kazakhstan",
-    value: 0.1,
+    value: 13.0,
     color: "#008fc9",
   },
   {
     country: "Sudan",
-    value: 6.0,
+    value: 65.0,
     color: "#507dca",
   },
 ];
 
-const svg = d3.select(".chart1");
-const svgContainer = d3.select("#container1");
+const svg = d3.select(".chart2");
+const svgContainer = d3.select("#container2");
 
 const margin = 80;
 const width = 1000 - 2 * margin;
@@ -168,6 +168,3 @@ svg
   .attr("y", 40)
   .attr("text-anchor", "middle")
   .text("Electricity generation by hydropower in 2019");
-
-
-

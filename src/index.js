@@ -1,6 +1,8 @@
 import "./styles/index.scss";
 import "./hydro.js";
 import "./wind.js";
+import "./solar.js";
+import "./thermo.js";
 
 
 window.addEventListener("DOMContentLoaded", () => {
