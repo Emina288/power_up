@@ -53,18 +53,22 @@ window.addEventListener("DOMContentLoaded", () => {
 
     spanH.onclick = function () {
         hydroModal.style.display = "none";
+        window.location.reload()
     }
 
     spanT.onclick = function () {
         thermoModal.style.display = "none";
+         window.location.reload();
     }
 
     spanS.onclick = function () {
         solarModal.style.display = "none";
+         window.location.reload();
     }
 
     spanW.onclick = function () {
         windModal.style.display = "none";
+         window.location.reload();
     }
 
     window.onclick = function (event) {

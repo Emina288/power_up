@@ -174,16 +174,21 @@ const barGroups = chart.selectAll().data(sample).enter().append("g");
 barGroups
   .append("rect")
   .attr("class", "bar")
-  .attr("x", (g) => xScale(g.country))
-  .attr("y", (g) => yScale(g.value))
-  .attr("height", (g) => height - yScale(g.value))
+  .attr("x",  d => { return xScale(d.country); })
   .attr("width", xScale.bandwidth())
+  .attr("y",  d => { return height; })
+  .attr("height", 0).transition().duration(500).delay(function (d, i) {return i * 50;})
+  .attr("y",  d => { return yScale(d.value); })
+  .attr("height",  d => { return height - yScale(d.value); })
+
+d3.selectAll(".bar")
   .on("click", function(actual, i) {
     d3.selectAll(".chart").remove();
     level2(actual);
 
   })
   .on("mouseenter", function (actual, i) {
+    console.log(actual)
     d3.selectAll(".value").attr("opacity", 0);
 
     d3.select(this)
@@ -258,7 +263,6 @@ svg
   .attr("y", 40)
   .attr("text-anchor", "middle")
   .text("Electricity generation by hydropower in 2019");
-
 }
 
 function level2(actual) {
@@ -377,6 +381,9 @@ function level2(actual) {
 
 }
 
-$(document).ready(function () {
-  level1();
+window.addEventListener("DOMContentLoaded", () => {
+   let h = document.getElementById("what");
+  h.onclick = function () {
+    level1();
+  };
 });
