@@ -42,8 +42,11 @@ path {
 
 text.divergence {
   font-size: 14px;
-  fill: rgb(165, 40, 40);
+  fill: rgb(247, 247, 247);
   font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  z-index: -1;
 
 }
 
@@ -65,8 +68,8 @@ text.source {
   font-size: 10px;
 }
 
-#what {
-height: 100%;
-    width: 100%;
-    background: transparent;
+#what1, #what2, #what3, #what4 {
+  height: 100%;
+  width: 100%;
+  background: transparent;
 }

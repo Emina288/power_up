@@ -74,7 +74,9 @@ window.addEventListener("DOMContentLoaded", () => {
     window.onclick = function (event) {
         if (event.target == modal || event.target == hydroModal || event.target === thermoModal || event.target === solarModal || event.target === windModal) {
             event.target.style.display = "none";
+             window.location.reload();
         }
+       
     }
   });
 

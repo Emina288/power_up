@@ -176,7 +176,7 @@ barGroups
   .attr("class", "bar")
   .attr("x",  d => { return xScale(d.country); })
   .attr("width", xScale.bandwidth())
-  .attr("y",  d => { return height; })
+  // .attr("y",  d => { return height; })
   .attr("height", 0).transition().duration(500).delay(function (d, i) {return i * 50;})
   .attr("y",  d => { return yScale(d.value); })
   .attr("height",  d => { return height - yScale(d.value); })
@@ -188,7 +188,6 @@ d3.selectAll(".bar")
 
   })
   .on("mouseenter", function (actual, i) {
-    console.log(actual)
     d3.selectAll(".value").attr("opacity", 0);
 
     d3.select(this)
@@ -212,8 +211,8 @@ d3.selectAll(".bar")
       .append("text")
       .attr("class", "divergence")
       .attr("x", (a) => xScale(a.country) + xScale.bandwidth() / 2)
-      .attr("y", (a) => yScale(a.value) + 20)
-      .attr("fill", "rgb(165, 40, 40)")
+      .attr("y", (a) => yScale(a.value) - 10)
+ 
       .attr("text-anchor", "middle")
       .text((a, idx) => {
         const divergence = (a.value - actual.value).toFixed(1);
@@ -222,7 +221,9 @@ d3.selectAll(".bar")
         if (divergence > 0) text += "+";
         text += `${divergence}%`;
 
-        return idx !== i ? text : "";
+        return idx !== i
+          ? text
+          : `${actual.country}, ${actual.value}%`;
       });
   })
   .on("mouseleave", function () {
@@ -239,13 +240,45 @@ d3.selectAll(".bar")
     chart.selectAll(".divergence").remove();
   });
 
-barGroups
+
+
+let text = barGroups
   .append("text")
   .attr("class", "value")
   .attr("x", (a) => xScale(a.country) + xScale.bandwidth() / 2)
   .attr("y", (a) => yScale(a.value) - 5)
+  .attr("y",  d => { return height ; })
+  .attr("height", 0)
+  .transition()
+  .duration(500)
+  .delay(function (d, i) {
+    return i * 50;
+  })
+  .attr("y", (d) => {
+    return yScale(d.value) - 20;
+  })
+  .attr("height", (d) => {
+    return height - yScale(d.value);
+  })
+  .attr("height", (a) => a.value)
   .attr("text-anchor", "middle")
-  .text((a) => `${a.value}%`);
+  .text(0);
+
+  //var text = svg.append("text").attr("x", 50).attr("y", 50).text(1);
+
+  text
+    .transition()
+    .tween("text", function () {
+      var selection = d3.select(this); // selection of node being transitioned
+      var start = d3.select(this).text(); // start value prior to transition
+      var end = this.getAttribute("height"); // specified end value
+      var interpolator = d3.interpolateNumber(start, end); // d3 interpolator
+
+      return function (t) {
+        selection.text(Math.round(interpolator(t)));
+      }; // return value
+    })
+    .duration(3000); ///
 
 svg
   .append("text")
@@ -266,123 +299,119 @@ svg
 }
 
 function level2(actual) {
-  const lineData = actual.dataset
-  console.log(lineData)
-  const margin = 80;
+    const lineData = actual.dataset
+    console.log(lineData)
+    const margin = 80;
 
 
-  const svgContainer = d3.select("#container");
-  const svg = svgContainer.append("svg").attr("class", "chart")
+    const svgContainer = d3.select("#container");
+    const svg = svgContainer.append("svg").attr("class", "chart")
 
-  const chart = svg
-    .append("g")
-    .attr("id", "visualisation")
-    .attr("transform", `translate(${margin/2}, ${margin})`);
-
-  var vis = d3.select("#visualisation"),
-    MARGINS = 80,
-    WIDTH = 1000 - 2 * MARGINS,
-    HEIGHT = 600 - 2 * MARGINS,
-    MARGINS = {
-      top: 20,
-      right: 20,
-      bottom: 20,
-      left: 50,
-    },
-    xRange = d3
-      .scaleBand()
-      .range([MARGINS.left, WIDTH - MARGINS.right])
-      .domain(years.map((s) => s))
-      .padding(0.4),
-    yRange = d3
-      .scaleLinear()
-      .range([HEIGHT - MARGINS.top, MARGINS.bottom])
-      .domain([
-        d3.min(lineData, function (d) {
-          return d.value;
-        }),
-        d3.max(lineData, function (d) {
-          return d.value;
-        }),
-      ]),
-    xAxis = d3.axisBottom().scale(xRange),
-    yAxis = d3.axisLeft().scale(yRange);
-
-    const makeYLines = () => d3.axisLeft().scale(yRange);
-
-    chart
+    const chart = svg
       .append("g")
-      .attr("class", "grid")
+      .attr("id", "visualisation")
+      .attr("transform", `translate(${margin/2}, ${margin})`);
+
+    var vis = d3.select("#visualisation"),
+      MARGINS = 80,
+      WIDTH = 1000 - 2 * MARGINS,
+      HEIGHT = 600 - 2 * MARGINS,
+      MARGINS = {
+        top: 20,
+        right: 20,
+        bottom: 20,
+        left: 50,
+      },
+
+      xRange = d3
+      .scaleLinear()
+      .range([0, WIDTH])
+      .domain(d3.extent(lineData, dataPoint => dataPoint.date)),
+      yRange = d3
+        .scaleLinear()
+        .range([HEIGHT - MARGINS.top, MARGINS.bottom])
+        .domain([
+          d3.min(lineData, function (d) {
+            return d.value;
+          }),
+          d3.max(lineData, function (d) {
+            return d.value;
+          }),
+        ]),
+      xAxis = d3.axisBottom().scale(xRange),
+      yAxis = d3.axisLeft().scale(yRange);
+
+      const makeYLines = () => d3.axisLeft().scale(yRange);
+
+      chart
+        .append("g")
+        .attr("class", "grid")
+        .attr("transform", "translate(" + MARGINS.left  + ",0)")
+        .call(makeYLines().tickSize(-WIDTH, 0, 0).tickFormat(""));
+
+
+    vis
+      .append("svg:g")
+      .attr("class", "x axis")
+      .attr("transform", "translate("+MARGINS.left +"," + (HEIGHT - MARGINS.bottom) + ")")
+      .call(xAxis);
+
+    vis
+      .append("svg:g")
+      .attr("class", "y axis")
       .attr("transform", "translate(" + MARGINS.left + ",0)")
-      .call(makeYLines().tickSize(-WIDTH, 0, 0).tickFormat(""));
+      .call(yAxis);
 
+    var lineFunc = d3
+      .line()
+      .x(function (d) {
+        return xRange(d.date);
+      })
+      .y(function (d) {
+        return yRange(d.value);
+      })
+      .curve(d3.curveBasis);
+    
 
-  vis
-    .append("svg:g")
-    .attr("class", "x axis")
-    .attr("transform", "translate(0," + (HEIGHT - MARGINS.bottom) + ")")
-    .call(xAxis);
+    vis
+      .append("svg:path")
+      .attr("d", lineFunc(lineData))
+      .attr("stroke", "blue")
+      .attr("stroke-width", 2)
+      .attr("fill", "none")
+      .attr("transform", "translate(" + MARGINS.left + ",0)")
+      svg
+      .append("text")
+      .attr("class", "title")
+      .attr("x", WIDTH / 2 + 80)
+      .attr("y", 40)
+      .attr("text-anchor", "middle")
+      .text(`Hydro power usage in ${actual.country} throughout the years`);
 
-  vis
-    .append("svg:g")
-    .attr("class", "y axis")
-    .attr("transform", "translate(" + MARGINS.left + ",0)")
-    .call(yAxis);
-
-  var lineFunc = d3
-    .line()
-    .x(function (d) {
-      return xRange(d.date);
-    })
-    .y(function (d) {
-      return yRange(d.value);
-    })
-    .curve(d3.curveBasis);
-  
-
-  vis
-    .append("svg:path")
-    .attr("d", lineFunc(lineData))
-    .attr("stroke", "blue")
-    .attr("stroke-width", 2)
-    .attr("fill", "none")
-    .on("click", function (actual, i) {
-      d3.selectAll(".chart").remove();
-      level1();
-    });
-
+    svg
+      .append("text")
+      .attr("class", "label")
+      .attr("x", -(HEIGHT / 2) - 80)
+      .attr("y", 80/ 2.4)
+      .attr("transform", "rotate(-90)")
+      .attr("text-anchor", "middle")
+      .text("Out of total electricity genration (%)");
     svg
     .append("text")
     .attr("class", "title")
     .attr("x", WIDTH / 2 + 80)
-    .attr("y", 40)
+    .attr("y", 60)
     .attr("text-anchor", "middle")
-    .text(`Hydro power usage in ${actual.country} throughout the years`);
-
-  svg
-    .append("text")
-    .attr("class", "label")
-    .attr("x", -(HEIGHT / 2) - 80)
-    .attr("y", 80/ 2.4)
-    .attr("transform", "rotate(-90)")
-    .attr("text-anchor", "middle")
-    .text("Out of total electricity genration (%)");
-  svg
-  .append("text")
-  .attr("class", "title")
-  .attr("x", WIDTH / 2 + 80)
-  .attr("y", 60)
-  .attr("text-anchor", "middle")
-  .text("Electricity generation by hydropower in 2019")
-  .on("click", function (actual, i) {
-      d3.selectAll(".chart").remove();
-      level1();
-    });
+    .text("Electricity generation by hydropower in 2019")
+    .on("click", function (actual, i) {
+        d3.selectAll(".chart").remove();
+        level1();
+      });
 
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-   let h = document.getElementById("what");
+   let h = document.getElementById("what1");
   h.onclick = function () {
     level1();
   };
