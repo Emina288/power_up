@@ -176,7 +176,7 @@ function level1() {
       return xScale(d.country);
     })
     .attr("width", xScale.bandwidth())
-    // .attr("y",  d => { return height; })
+    .attr("y",  d => { return height; })
     .attr("height", 0)
     .transition()
     .duration(500)
@@ -278,7 +278,7 @@ function level1() {
       var selection = d3.select(this); // selection of node being transitioned
       var start = d3.select(this).text(); // start value prior to transition
       var end = this.getAttribute("height"); // specified end value
-      var interpolator = d3.interpolateNumber(start, end); // d3 interpolator
+      var interpolator = d3.interpolateNumber(end, end); // d3 interpolator
 
       return function (t) {
         selection.text(Math.round(interpolator(t)));
@@ -301,7 +301,7 @@ function level1() {
     .attr("x", width / 2 + margin)
     .attr("y", 40)
     .attr("text-anchor", "middle")
-    .text("Electricity generation by hydropower in 2019");
+    .text("Electricity generation by solar power in 2019");
 }
 
 function level2(actual) {
@@ -378,20 +378,31 @@ function level2(actual) {
     })
     .curve(d3.curveBasis);
 
-  vis
+  const path = vis
     .append("svg:path")
     .attr("d", lineFunc(lineData))
     .attr("stroke", "blue")
     .attr("stroke-width", 2)
     .attr("fill", "none")
     .attr("transform", "translate(" + MARGINS.left + ",0)");
+
+  let totalLength = path.node().getTotalLength();
+
+  path
+    .attr("stroke-dasharray", totalLength + " " + totalLength)
+    .attr("stroke-dashoffset", totalLength)
+    .transition() 
+    .duration(4000) 
+    .ease(d3.easeLinear) 
+    .attr("stroke-dashoffset", 0); 
+
   svg
     .append("text")
     .attr("class", "title")
     .attr("x", WIDTH / 2 + 80)
     .attr("y", 40)
     .attr("text-anchor", "middle")
-    .text(`Hydro power usage in ${actual.country} throughout the years`);
+    .text(`Solar power usage in ${actual.country} throughout the years`);
 
   svg
     .append("text")
@@ -403,11 +414,11 @@ function level2(actual) {
     .text("Out of total electricity genration (%)");
   svg
     .append("text")
-    .attr("class", "title")
-    .attr("x", WIDTH / 2 + 80)
-    .attr("y", 60)
+    .attr("class", "back")
+    .attr("x", WIDTH / 10)
+    .attr("y", 40)
     .attr("text-anchor", "middle")
-    .text("Electricity generation by hydropower in 2019")
+    .text("Back")
     .on("click", function (actual, i) {
       d3.selectAll(".chart2").remove();
       level1();

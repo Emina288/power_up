@@ -59,3 +59,39 @@ text.label {
 text.source {
   font-size: 10px;
 }
+
+.back {
+  cursor: pointer;
+  font-size: 28px;
+   animation: back 4s infinite;
+   animation-timing-function: ease-in;
+}
+
+@keyframes back {
+  0% {
+    fill: #929cf7;
+  }
+   20% {
+    fill: rgb(193, 194, 247);
+    font-size: 33px;
+  }
+
+  40% {
+    fill: #9da1f5;
+    font-size: 38px;
+  } 
+  60% {
+    fill: rgb(126, 128, 248);
+    font-size: 40px;
+  }
+
+  80% {
+    fill:  #9da1f5;
+    font-size: 38px;
+  }
+
+  100% {
+    fill: rgb(193, 194, 247);
+    font-size: 33px;
+  }
+}

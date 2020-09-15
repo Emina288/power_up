@@ -187,7 +187,10 @@ d3.selectAll(".bar")
     level2(actual);
 
   })
-  .on("mouseenter", function (actual, i) {
+  .on("mouseenter", function (actual, i)
+    {
+   
+
     d3.selectAll(".value").attr("opacity", 0);
 
     d3.select(this)
@@ -225,6 +228,7 @@ d3.selectAll(".bar")
           ? text
           : `${actual.country}, ${actual.value}%`;
       });
+    
   })
   .on("mouseleave", function () {
     d3.selectAll(".value").attr("opacity", 1);
@@ -373,13 +377,25 @@ function level2(actual) {
       .curve(d3.curveBasis);
     
 
-    vis
+    const path = vis
       .append("svg:path")
       .attr("d", lineFunc(lineData))
       .attr("stroke", "blue")
       .attr("stroke-width", 2)
       .attr("fill", "none")
-      .attr("transform", "translate(" + MARGINS.left + ",0)")
+      .attr("transform", "translate(" + MARGINS.left + ",0)");
+
+    let totalLength = path.node().getTotalLength();
+
+    path
+      .attr("stroke-dasharray", totalLength + " " + totalLength)
+      .attr("stroke-dashoffset", totalLength)
+      .transition()
+      .duration(4000)
+      .ease(d3.easeLinear)
+      .attr("stroke-dashoffset", 0); 
+
+
       svg
       .append("text")
       .attr("class", "title")
@@ -397,13 +413,13 @@ function level2(actual) {
       .attr("text-anchor", "middle")
       .text("Out of total electricity genration (%)");
     svg
-    .append("text")
-    .attr("class", "title")
-    .attr("x", WIDTH / 2 + 80)
-    .attr("y", 60)
-    .attr("text-anchor", "middle")
-    .text("Electricity generation by hydropower in 2019")
-    .on("click", function (actual, i) {
+      .append("text")
+      .attr("class", "back")
+      .attr("x", WIDTH / 10)
+      .attr("y", 40)
+      .attr("text-anchor", "middle")
+      .text("Back")
+      .on("click", function (actual, i) {
         d3.selectAll(".chart").remove();
         level1();
       });
