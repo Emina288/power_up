@@ -1,67 +1,77 @@
 const sample = [
   {
     country: "Russia",
-    value: 16.0,
+    value: 1,
     color: "#000000",
     prodH: [12, 15, 18, 9, 16.0],
     dataset: [
-      { date: 2000, value: 12 },
-      { date: 2005, value: 15 },
-      { date: 2010, value: 18 },
-      { date: 2015, value: 11 },
-      { date: 2020, value: 16 },
+      { date: 1993, value: 0 },
+      { date: 1998, value: 0 },
+      { date: 2003, value: 0 },
+      { date: 2005, value: 0.3 },
+      { date: 2009, value: 2 },
+      { date: 2014, value: 0.05 },
+      { date: 2019, value: 0.4 },
     ],
   },
   {
     country: "Canada",
-    value: 60.0,
+    value: 5.2,
     color: "#00a2ee",
     prodH: [45, 32, 58, 65, 60],
     dataset: [
-      { date: 2000, value: 45 },
-      { date: 2005, value: 32 },
-      { date: 2010, value: 58 },
-      { date: 2015, value: 65 },
-      { date: 2020, value: 60 },
+      { date: 1993, value: 1 },
+      { date: 1998, value: 1 },
+      { date: 2003, value: 1 },
+      { date: 2005, value: 2.8 },
+      { date: 2009, value: 5 },
+      { date: 2014, value: 3 },
+      { date: 2019, value: 5.2 },
     ],
   },
   {
     country: "China",
-    value: 20.0,
+    value: 2.5,
     color: "#fbcb39",
     prodH: [8, 11, 15, 18, 20],
     dataset: [
-      { date: 2000, value: 8 },
-      { date: 2005, value: 11 },
-      { date: 2010, value: 15 },
-      { date: 2015, value: 18 },
-      { date: 2020, value: 20 },
+      { date: 1993, value: 0 },
+      { date: 1998, value: 0.5 },
+      { date: 2003, value: 0.8 },
+      { date: 2005, value: 1 },
+      { date: 2009, value: 3 },
+      { date: 2014, value: 4.2 },
+      { date: 2019, value: 2.5 },
     ],
   },
   {
     country: "United States",
-    value: 7.0,
+    value: 1.8,
     color: "#007bc8",
     prodH: [1, 3, 5, 10, 7],
     dataset: [
-      { date: 2000, value: 1 },
-      { date: 2005, value: 3 },
-      { date: 2010, value: 5 },
-      { date: 2015, value: 10 },
-      { date: 2020, value: 7 },
+      { date: 1993, value: 0 },
+      { date: 1998, value: 2 },
+      { date: 2003, value: 1 },
+      { date: 2005, value: 5 },
+      { date: 2009, value: 2 },
+      { date: 2014, value: 4 },
+      { date: 2019, value: 1.8 },
     ],
   },
   {
     country: "Brazil",
-    value: 70.0,
+    value: 7.2,
     color: "#65cedb",
     prodH: [40, 48, 32, 55, 70],
     dataset: [
-      { date: 2000, value: 40 },
-      { date: 2005, value: 48 },
-      { date: 2010, value: 32 },
-      { date: 2015, value: 55 },
-      { date: 2020, value: 70 },
+      { date: 1993, value: 0 },
+      { date: 1998, value: 2 },
+      { date: 2003, value: 3 },
+      { date: 2005, value: 5.5 },
+      { date: 2009, value: 5.8 },
+      { date: 2014, value: 7 },
+      { date: 2019, value: 7.2 },
     ],
   },
   {
@@ -70,63 +80,58 @@ const sample = [
     color: "#ff6e52",
     prodH: [1, 3, 5, 10, 7],
     dataset: [
-      { date: 2000, value: 1 },
-      { date: 2005, value: 3 },
-      { date: 2010, value: 5 },
-      { date: 2015, value: 10 },
-      { date: 2020, value: 7 },
+      { date: 1993, value: 0 },
+      { date: 1998, value: 2 },
+      { date: 2003, value: 3 },
+      { date: 2005, value: 5.5 },
+      { date: 2009, value: 5.8 },
+      { date: 2014, value: 7 },
+      { date: 2019, value: 7 },
     ],
   },
   {
     country: "India",
-    value: 26.0,
+    value: 8.3,
     color: "#f9de3f",
     prodH: [8, 11, 15, 18, 26],
     dataset: [
-      { date: 2000, value: 8 },
-      { date: 2005, value: 11 },
-      { date: 2010, value: 15 },
-      { date: 2015, value: 18 },
-      { date: 2020, value: 26 },
+      { date: 1993, value: 1 },
+      { date: 1998, value: 2.9 },
+      { date: 2003, value: 3.8 },
+      { date: 2005, value: 6 },
+      { date: 2009, value: 5.8 },
+      { date: 2014, value: 7 },
+      { date: 2019, value: 8.3 },
     ],
   },
   {
     country: "Argentina",
-    value: 7.3,
+    value: 1,
     color: "#5d2f8e",
     prodH: [1, 3, 5, 10, 7.3],
     dataset: [
-      { date: 2000, value: 1 },
-      { date: 2005, value: 3 },
-      { date: 2010, value: 5 },
-      { date: 2015, value: 10 },
-      { date: 2020, value: 7.3 },
+      { date: 1993, value: 0 },
+      { date: 1998, value: 0 },
+      { date: 2003, value: 0 },
+      { date: 2005, value: 0.5 },
+      { date: 2009, value: 0.5 },
+      { date: 2014, value: 0.8 },
+      { date: 2019, value: 1 },
     ],
   },
   {
     country: "Kazakhstan",
-    value: 13.0,
+    value: 2.5,
     color: "#008fc9",
     prodH: [12, 15, 18, 9, 16.0],
     dataset: [
-      { date: 2000, value: 12 },
-      { date: 2005, value: 15 },
-      { date: 2010, value: 18 },
-      { date: 2015, value: 9 },
-      { date: 2020, value: 16 },
-    ],
-  },
-  {
-    country: "Sudan",
-    value: 65.0,
-    color: "#507dca",
-    prodH: [45, 32, 58, 65, 60],
-    dataset: [
-      { date: 2000, value: 45 },
-      { date: 2005, value: 32 },
-      { date: 2010, value: 58 },
-      { date: 2015, value: 65 },
-      { date: 2020, value: 60 },
+      { date: 1993, value: 1 },
+      { date: 1998, value: 1 },
+      { date: 2003, value: 1 },
+      { date: 2005, value: 1.5 },
+      { date: 2009, value: 2.5 },
+      { date: 2014, value: 2 },
+      { date: 2019, value: 2.5 },
     ],
   },
 ];
@@ -151,7 +156,7 @@ function level1() {
     .domain(sample.map((s) => s.country))
     .padding(0.4);
 
-  const yScale = d3.scaleLinear().range([height, 0]).domain([0, 100]);
+  const yScale = d3.scaleLinear().range([height, 0]).domain([0, 10]);
 
   const makeYLines = () => d3.axisLeft().scale(yScale);
 
@@ -171,7 +176,7 @@ function level1() {
 
   barGroups
     .append("rect")
-    .attr("class", "bar")
+    .attr("class", "bar2")
     .attr("x", (d) => {
       return xScale(d.country);
     })
@@ -190,7 +195,7 @@ function level1() {
       return height - yScale(d.value);
     });
 
-  d3.selectAll(".bar")
+  d3.selectAll(".bar2")
     .on("click", function (actual, i) {
       d3.selectAll(".chart2").remove();
       level2(actual);
@@ -256,7 +261,7 @@ function level1() {
     })
     .attr("height", 0)
     .transition()
-    .duration(500)
+    .duration(300)
     .delay(function (d, i) {
       return i * 50;
     })
@@ -270,21 +275,20 @@ function level1() {
     .attr("text-anchor", "middle")
     .text(0);
 
-  //var text = svg.append("text").attr("x", 50).attr("y", 50).text(1);
 
   text
     .transition()
     .tween("text", function () {
-      var selection = d3.select(this); // selection of node being transitioned
-      var start = d3.select(this).text(); // start value prior to transition
-      var end = this.getAttribute("height"); // specified end value
-      var interpolator = d3.interpolateNumber(end, end); // d3 interpolator
+      var selection = d3.select(this);
+      var start = d3.select(this).text();
+      var end = this.getAttribute("height"); 
+      var interpolator = d3.interpolateNumber(end, end); 
 
       return function (t) {
         selection.text(Math.round(interpolator(t)));
-      }; // return value
+      }; 
     })
-    .duration(3000); ///
+    .duration(3000);
 
   svg
     .append("text")
@@ -302,6 +306,18 @@ function level1() {
     .attr("y", 40)
     .attr("text-anchor", "middle")
     .text("Electricity generation by solar power in 2019");
+
+  svg
+    .append("text")
+    .attr("class", "back2")
+    .attr("x", width / 10)
+    .attr("y", 40)
+    .attr("text-anchor", "middle")
+    .text("Click to find out more")
+    .on("click", function (actual, i) {
+      d3.selectAll(".chart2").remove();
+      level3();
+    });
 }
 
 function level2(actual) {
@@ -335,9 +351,7 @@ function level2(actual) {
       .scaleLinear()
       .range([HEIGHT - MARGINS.top, MARGINS.bottom])
       .domain([
-        d3.min(lineData, function (d) {
-          return d.value;
-        }),
+        0,
         d3.max(lineData, function (d) {
           return d.value;
         }),
@@ -380,6 +394,7 @@ function level2(actual) {
 
   const path = vis
     .append("svg:path")
+    .attr("class", "path2")
     .attr("d", lineFunc(lineData))
     .attr("stroke", "blue")
     .attr("stroke-width", 2)
@@ -414,7 +429,7 @@ function level2(actual) {
     .text("Out of total electricity genration (%)");
   svg
     .append("text")
-    .attr("class", "back")
+    .attr("class", "back3")
     .attr("x", WIDTH / 10)
     .attr("y", 40)
     .attr("text-anchor", "middle")
@@ -424,6 +439,45 @@ function level2(actual) {
       level1();
     });
 }
+
+function level3() {
+  const svgContainer = d3.select("#container2");
+  const svg = svgContainer.append("svg").attr("class", "chart2");
+  (MARGINS = 80),
+    (WIDTH = 1000 - 2 * MARGINS),
+    (HEIGHT = 600 - 2 * MARGINS),
+    (MARGINS = {
+      top: 20,
+      right: 20,
+      bottom: 20,
+      left: 50,
+    }),
+    svg
+      .append("foreignObject")
+      .attr("class", "graph-title2")
+      .attr("width", WIDTH)
+      .attr("height", 600)
+      .attr("x", 50)
+      .attr("y", 0)
+      .append("xhtml:body")
+      .style("font", "14px 'Helvetica Neue'")
+      .html(
+        "<h1>Solar Power</h1><div><div><p>Solar power is the conversion of energy from sunlight into electricity, either directly using photovoltaics (PV), indirectly using concentrated solar power, or a combination.</p><p>Solar-powered photovoltaic (PV) panels convert the sun's rays into electricity by exciting electrons in silicon cells using the photons of light from the sun. This electricity can then be used to supply renewable energy to your home or business.In most solar systems, solar panels are placed on the roof. An ideal site will have no shade on the panels, especially during the prime sunlight hours of 9 a.m. to 3 p.m.; a south-facing installation will usually provide the optimum potential for your system, but other orientations may provide sufficient production. </p></div><div class='graph-div2'></div></div>"
+      );
+    
+    svg
+      .append("text")
+      .attr("class", "back4")
+      .attr("x", WIDTH / 10)
+      .attr("y", 50)
+      .attr("text-anchor", "middle")
+      .text("Back")
+      .on("click", function () {
+        d3.selectAll(".chart2").remove();
+        level1();
+      });
+}
+
 
 window.addEventListener("DOMContentLoaded", () => {
   let h = document.getElementById("what2");

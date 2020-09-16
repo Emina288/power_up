@@ -2,7 +2,7 @@
   width: 1000px;
   height: 600px;
   margin: auto;
-  background-color: #1f1714;
+  background-color: #007EA7;
   border-radius: 10px;
 }
 
@@ -12,7 +12,7 @@
 }
 
 .bar {
-  fill: #bf8836;
+  fill: white;
   cursor: pointer;
 }
 
@@ -21,8 +21,8 @@ text {
   fill: #fff;
 }
 
-path {
-  stroke: gray;
+.path {
+  stroke: white;
 }
 
  line {
@@ -72,4 +72,33 @@ text.source {
   height: 100%;
   width: 100%;
   background: transparent;
+}
+
+.graph-title body {
+background: #007EA7;
+ color:white;
+}
+
+.graph-title body h1 {
+  text-align: center;
+  font-size: 37px;
+}
+
+.graph-title body p {
+  text-align: justify;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+.graph-div {
+  width: 800px;
+  height: 320px;
+  background-image: url('../images/hydroP.jpg');
+  position: relative;
+  left:2%;
+}
+
+.back2 {
+  font-size: 16px;
+  cursor: pointer;
 }

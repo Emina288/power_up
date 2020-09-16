@@ -2,7 +2,7 @@
   width: 1000px;
   height: 600px;
   margin: auto;
-  background-color: #1f1714;
+  background-color: #4F5D75;
   border-radius: 10px;
 }
 
@@ -11,8 +11,8 @@
   height: 100%;
 }
 
-.bar {
-  fill: #bf8836;
+.bar1 {
+  fill: #EF8354;
   cursor: pointer;
 }
 
@@ -21,8 +21,8 @@ text {
   fill: #fff;
 }
 
-path {
-  stroke: gray;
+.path1 {
+  stroke: #EF8354;
 }
 
  line {
@@ -58,4 +58,34 @@ text.label {
 
 text.source {
   font-size: 10px;
+}
+
+.graph-div1 {
+  width: 600px;
+  height: 369px;
+  background-image: url('../images/windP.jpg');
+  position: relative;
+  left: 17%;
+}
+
+.graph-title1 body {
+background: #4F5D75;
+color: #BFC0C0;
+ font-family: "Lucida Console", Monaco, monospace;
+}
+
+.graph-title1 body h1 {
+  text-align: center;
+  font-size: 37px;
+}
+
+.graph-title1 body p {
+  text-align: justify;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+.back4 {
+  font-size: 16px;
+  cursor: pointer;
 }

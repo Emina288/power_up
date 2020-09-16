@@ -1,67 +1,77 @@
 const sample = [
   {
     country: "Russia",
-    value: 16.0,
+    value: 1,
     color: "#000000",
     prodH: [12, 15, 18, 9, 16.0],
     dataset: [
-      { date: 2000, value: 12 },
-      { date: 2005, value: 15 },
-      { date: 2010, value: 18 },
-      { date: 2015, value: 11 },
-      { date: 2020, value: 16 },
+      { date: 1993, value: 0 },
+      { date: 1998, value: 0 },
+      { date: 2003, value: 0 },
+      { date: 2005, value: 0.3 },
+      { date: 2009, value: 2 },
+      { date: 2014, value: 0.05 },
+      { date: 2019, value: 0.1 },
     ],
   },
   {
     country: "Canada",
-    value: 60.0,
+    value: 2.9,
     color: "#00a2ee",
     prodH: [45, 32, 58, 65, 60],
     dataset: [
-      { date: 2000, value: 45 },
-      { date: 2005, value: 32 },
-      { date: 2010, value: 58 },
-      { date: 2015, value: 65 },
-      { date: 2020, value: 60 },
+      { date: 1993, value: 1 },
+      { date: 1998, value: 1 },
+      { date: 2003, value: 1 },
+      { date: 2005, value: 1.5 },
+      { date: 2009, value: 2.5 },
+      { date: 2014, value: 2 },
+      { date: 2019, value: 2.9 },
     ],
   },
   {
     country: "China",
-    value: 20.0,
+    value: 6.3,
     color: "#fbcb39",
     prodH: [8, 11, 15, 18, 20],
     dataset: [
-      { date: 2000, value: 8 },
-      { date: 2005, value: 11 },
-      { date: 2010, value: 15 },
-      { date: 2015, value: 18 },
-      { date: 2020, value: 20 },
+      { date: 1993, value: 0 },
+      { date: 1998, value: 0.5 },
+      { date: 2003, value: 0.8 },
+      { date: 2005, value: 1 },
+      { date: 2009, value: 3 },
+      { date: 2014, value: 4.2 },
+      { date: 2019, value: 6.33 },
     ],
   },
   {
     country: "United States",
-    value: 7.0,
+    value: 7.3,
     color: "#007bc8",
     prodH: [1, 3, 5, 10, 7],
     dataset: [
-      { date: 2000, value: 1 },
-      { date: 2005, value: 3 },
-      { date: 2010, value: 5 },
-      { date: 2015, value: 10 },
-      { date: 2020, value: 7 },
+      { date: 1993, value: 0 },
+      { date: 1998, value: 2 },
+      { date: 2003, value: 3 },
+      { date: 2005, value: 5.5 },
+      { date: 2009, value: 5.8 },
+      { date: 2014, value: 7 },
+      { date: 2019, value: 7.3 },
     ],
   },
   {
     country: "Brazil",
-    value: 70.0,
+    value: 2.8,
     color: "#65cedb",
     prodH: [40, 48, 32, 55, 70],
     dataset: [
-      { date: 2000, value: 40 },
-      { date: 2005, value: 48 },
-      { date: 2010, value: 32 },
-      { date: 2015, value: 55 },
-      { date: 2020, value: 70 },
+      { date: 1993, value: 0 },
+      { date: 1998, value: 2 },
+      { date: 2003, value: 3 },
+      { date: 2005, value: 5.5 },
+      { date: 2009, value: 5.8 },
+      { date: 2014, value: 4 },
+      { date: 2019, value: 2.8 },
     ],
   },
   {
@@ -70,63 +80,58 @@ const sample = [
     color: "#ff6e52",
     prodH: [1, 3, 5, 10, 7],
     dataset: [
-      { date: 2000, value: 1 },
-      { date: 2005, value: 3 },
-      { date: 2010, value: 5 },
-      { date: 2015, value: 10 },
-      { date: 2020, value: 7 },
+      { date: 1993, value: 0 },
+      { date: 1998, value: 2 },
+      { date: 2003, value: 3 },
+      { date: 2005, value: 5.5 },
+      { date: 2009, value: 5.8 },
+      { date: 2014, value: 7 },
+      { date: 2019, value: 7 },
     ],
   },
   {
     country: "India",
-    value: 26.0,
+    value: 4.6,
     color: "#f9de3f",
     prodH: [8, 11, 15, 18, 26],
     dataset: [
-      { date: 2000, value: 8 },
-      { date: 2005, value: 11 },
-      { date: 2010, value: 15 },
-      { date: 2015, value: 18 },
-      { date: 2020, value: 26 },
+      { date: 1993, value: 1 },
+      { date: 1998, value: 1 },
+      { date: 2003, value: 1 },
+      { date: 2005, value: 2.8 },
+      { date: 2009, value: 5 },
+      { date: 2014, value: 3 },
+      { date: 2019, value: 4.6 },
     ],
   },
   {
     country: "Argentina",
-    value: 7.3,
+    value: 1,
     color: "#5d2f8e",
     prodH: [1, 3, 5, 10, 7.3],
     dataset: [
-      { date: 2000, value: 1 },
-      { date: 2005, value: 3 },
-      { date: 2010, value: 5 },
-      { date: 2015, value: 10 },
-      { date: 2020, value: 7.3 },
+      { date: 1993, value: 0 },
+      { date: 1998, value: 0 },
+      { date: 2003, value: 0 },
+      { date: 2005, value: 0.5 },
+      { date: 2009, value: 0.5 },
+      { date: 2014, value: 0.8 },
+      { date: 2019, value: 1 },
     ],
   },
   {
     country: "Kazakhstan",
-    value: 13.0,
+    value: 3.2,
     color: "#008fc9",
     prodH: [12, 15, 18, 9, 16.0],
     dataset: [
-      { date: 2000, value: 12 },
-      { date: 2005, value: 15 },
-      { date: 2010, value: 18 },
-      { date: 2015, value: 9 },
-      { date: 2020, value: 16 },
-    ],
-  },
-  {
-    country: "Sudan",
-    value: 65.0,
-    color: "#507dca",
-    prodH: [45, 32, 58, 65, 60],
-    dataset: [
-      { date: 2000, value: 45 },
-      { date: 2005, value: 32 },
-      { date: 2010, value: 58 },
-      { date: 2015, value: 65 },
-      { date: 2020, value: 60 },
+      { date: 1993, value: 1 },
+      { date: 1998, value: 1 },
+      { date: 2003, value: 1 },
+      { date: 2005, value: 1.5 },
+      { date: 2009, value: 2.5 },
+      { date: 2014, value: 2 },
+      { date: 2019, value: 3.2 },
     ],
   },
 ];
@@ -151,7 +156,7 @@ function level1() {
     .domain(sample.map((s) => s.country))
     .padding(0.4);
 
-  const yScale = d3.scaleLinear().range([height, 0]).domain([0, 100]);
+  const yScale = d3.scaleLinear().range([height, 0]).domain([0, 10]);
 
   const makeYLines = () => d3.axisLeft().scale(yScale);
 
@@ -171,12 +176,11 @@ function level1() {
 
   barGroups
     .append("rect")
-    .attr("class", "bar")
+    .attr("class", "bar1")
     .attr("x", (d) => {
       return xScale(d.country);
     })
     .attr("width", xScale.bandwidth())
-    // .attr("y",  d => { return height; })
     .attr("height", 0)
     .transition()
     .duration(500)
@@ -190,7 +194,7 @@ function level1() {
       return height - yScale(d.value);
     });
 
-  d3.selectAll(".bar")
+  d3.selectAll(".bar1")
     .on("click", function (actual, i) {
       d3.selectAll(".chart1").remove();
       level2(actual);
@@ -256,7 +260,7 @@ function level1() {
     })
     .attr("height", 0)
     .transition()
-    .duration(500)
+    .duration(300)
     .delay(function (d, i) {
       return i * 50;
     })
@@ -270,21 +274,20 @@ function level1() {
     .attr("text-anchor", "middle")
     .text(0);
 
-  //var text = svg.append("text").attr("x", 50).attr("y", 50).text(1);
 
   text
     .transition()
     .tween("text", function () {
-      var selection = d3.select(this); // selection of node being transitioned
-      var start = d3.select(this).text(); // start value prior to transition
-      var end = this.getAttribute("height"); // specified end value
-      var interpolator = d3.interpolateNumber(start, end); // d3 interpolator
+      var selection = d3.select(this);
+      var start = d3.select(this).text();
+      var end = this.getAttribute("height");
+      var interpolator = d3.interpolateNumber(end, end);
 
       return function (t) {
         selection.text(Math.round(interpolator(t)));
-      }; // return value
+      }; 
     })
-    .duration(3000); ///
+    .duration(3000);
 
   svg
     .append("text")
@@ -302,6 +305,18 @@ function level1() {
     .attr("y", 40)
     .attr("text-anchor", "middle")
     .text("Electricity generation by wind power in 2019");
+
+  svg
+    .append("text")
+    .attr("class", "back2")
+    .attr("x", width / 10)
+    .attr("y", 40)
+    .attr("text-anchor", "middle")
+    .text("Click to find out more")
+    .on("click", function (actual, i) {
+      d3.selectAll(".chart1").remove();
+      level3();
+    });
 }
 
 function level2(actual) {
@@ -335,9 +350,7 @@ function level2(actual) {
       .scaleLinear()
       .range([HEIGHT - MARGINS.top, MARGINS.bottom])
       .domain([
-        d3.min(lineData, function (d) {
-          return d.value;
-        }),
+        0,
         d3.max(lineData, function (d) {
           return d.value;
         }),
@@ -380,6 +393,7 @@ function level2(actual) {
 
   const path = vis
     .append("svg:path")
+    .attr("class", "path1")
     .attr("d", lineFunc(lineData))
     .attr("stroke", "blue")
     .attr("stroke-width", 2)
@@ -394,8 +408,7 @@ function level2(actual) {
     .transition()
     .duration(4000)
     .ease(d3.easeLinear)
-    .attr("stroke-dashoffset", 0); 
-
+    .attr("stroke-dashoffset", 0);
 
   svg
     .append("text")
@@ -415,7 +428,7 @@ function level2(actual) {
     .text("Out of total electricity genration (%)");
   svg
     .append("text")
-    .attr("class", "back")
+    .attr("class", "back3")
     .attr("x", WIDTH / 10)
     .attr("y", 40)
     .attr("text-anchor", "middle")
@@ -425,6 +438,45 @@ function level2(actual) {
       level1();
     });
 }
+
+  function level3() {
+    const svgContainer = d3.select("#container1");
+    const svg = svgContainer.append("svg").attr("class", "chart1");
+    (MARGINS = 80),
+      (WIDTH = 1000 - 2 * MARGINS),
+      (HEIGHT = 600 - 2 * MARGINS),
+      (MARGINS = {
+        top: 20,
+        right: 20,
+        bottom: 20,
+        left: 50,
+      }),
+      svg
+        .append("foreignObject")
+        .attr("class", "graph-title1")
+        .attr("width", WIDTH)
+        .attr("height", 600)
+        .attr("x", 50)
+        .attr("y", 0)
+        .append("xhtml:body")
+        .style("font", "14px 'Helvetica Neue'")
+        .html(
+          "<h1>Wind Power</h1><div><div><p>Wind power or wind energy is the use of wind to provide the mechanical power through wind turbines to turn electric generators and traditionally to do other work, like milling or pumping.</p><p>When the wind blows past a wind turbine, its blades capture the wind's kinetic energy and rotate, turning it into mechanical energy. This rotation turns an internal shaft connected to a gearbox, which increases the speed of rotation by a factor of 100. That spins a generator that produces electricity.<p> </p></div><div class='graph-div1'></div></div>"
+        );
+
+    svg
+      .append("text")
+      .attr("class", "back4")
+      .attr("x", WIDTH / 10)
+      .attr("y", 50)
+      .attr("text-anchor", "middle")
+      .text("Back")
+      .on("click", function () {
+        d3.selectAll(".chart1").remove();
+        level1();
+      });
+  }
+
 
 window.addEventListener("DOMContentLoaded", () => {
   let h = document.getElementById("what3");

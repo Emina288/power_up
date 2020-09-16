@@ -2,7 +2,7 @@ div#container3 {
   width: 1000px;
   height: 600px;
   margin: auto;
-  background-color: #1f1714;
+  background-color: #6A040F;
   border-radius: 10px;
 }
 
@@ -11,8 +11,8 @@ div#container3 {
   height: 100%;
 }
 
-.bar {
-  fill: #bf8836;
+.bar3 {
+  fill:  #E85D04;
   cursor: pointer;
 }
 
@@ -42,25 +42,28 @@ path {
 
 
 
-text.value {
+text.value3 {
   font-size: 14px;
+  fill: #F48C06;
 }
 
-text.title {
+text.title3 {
   font-size: 22px;
   font-weight: 600;
+  fill: #FFBA08;
 }
 
-text.label {
+text.label3 {
   font-size: 14px;
   font-weight: 400;
+  fill: #FFBA08;
 }
 
 text.source {
   font-size: 10px;
 }
 
-.back {
+.back3 {
   cursor: pointer;
   font-size: 28px;
    animation: back 4s infinite;
@@ -69,29 +72,59 @@ text.source {
 
 @keyframes back {
   0% {
-    fill: #929cf7;
+    fill: #FFBA08;
   }
    20% {
-    fill: rgb(193, 194, 247);
+    fill: #FAA307;
     font-size: 33px;
   }
 
   40% {
-    fill: #9da1f5;
+    fill: #E85D04;
     font-size: 38px;
   } 
   60% {
-    fill: rgb(126, 128, 248);
+    fill: #D00000;
     font-size: 40px;
   }
 
   80% {
-    fill:  #9da1f5;
+    fill: #E85D04;
     font-size: 38px;
   }
 
   100% {
-    fill: rgb(193, 194, 247);
+    fill: #FAA307;
     font-size: 33px;
   }
+}
+
+.graph-div3 {
+  width: 500px;
+  height: 259px;
+  background-image: url('../images/thermoP.png');
+  position: relative;
+  left: 23%;
+}
+
+.graph-title3 body {
+background: #6A040F;
+color: #FAA307;
+ font-family: "Lucida Console", Monaco, monospace;
+}
+
+.graph-title3 body h1 {
+  text-align: center;
+  font-size: 37px;
+}
+
+.graph-title3 body p {
+  text-align: justify;
+  letter-spacing: 3px;
+  font-size: 16px;
+}
+
+.back4 {
+  font-size: 16px;
+  cursor: pointer;
 }

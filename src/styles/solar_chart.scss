@@ -2,7 +2,7 @@ div#container2 {
   width: 1000px;
   height: 600px;
   margin: auto;
-  background-color: #1f1714;
+  background-color: #390099;
   border-radius: 10px;
 }
 
@@ -11,8 +11,8 @@ div#container2 {
   height: 100%;
 }
 
-.bar {
-  fill: #bf8836;
+.bar2 {
+  fill: #FFBD00;
   cursor: pointer;
 }
 
@@ -21,8 +21,8 @@ text {
   fill: #fff;
 }
 
-path {
-  stroke: gray;
+.path2 {
+  stroke: #FFBD00;
 }
 
  line {
@@ -58,4 +58,34 @@ text.label {
 
 text.source {
   font-size: 10px;
+}
+
+.graph-div2 {
+  width: 500px;
+  height: 240px;
+  background-image: url('../images/solarP.jpg');
+  position: relative;
+  left: 21%;
+}
+
+.graph-title2 body {
+background: #390099;
+color: white;
+ font-family: "Lucida Console", Monaco, monospace;
+}
+
+.graph-title2 body h1 {
+  text-align: center;
+  font-size: 37px;
+}
+
+.graph-title2 body p {
+  text-align: justify;
+  letter-spacing: 3px;
+  font-size: 16px;
+}
+
+.back4 {
+  font-size: 16px;
+  cursor: pointer;
 }

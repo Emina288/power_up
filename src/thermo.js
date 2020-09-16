@@ -1,132 +1,137 @@
 const sample = [
   {
     country: "Russia",
-    value: 16.0,
+    value: 73.4,
     color: "#000000",
     prodH: [12, 15, 18, 9, 16.0],
     dataset: [
-      { date: 2000, value: 12 },
-      { date: 2005, value: 15 },
-      { date: 2010, value: 18 },
-      { date: 2015, value: 11 },
-      { date: 2020, value: 16 },
+      { date: 1993, value: 90 },
+      { date: 1998, value: 88 },
+      { date: 2003, value: 80 },
+      { date: 2005, value: 80 },
+      { date: 2009, value: 75 },
+      { date: 2014, value: 68 },
+      { date: 2019, value: 73.4 },
     ],
   },
   {
     country: "Canada",
-    value: 60.0,
+    value: 34.2,
     color: "#00a2ee",
     prodH: [45, 32, 58, 65, 60],
     dataset: [
-      { date: 2000, value: 45 },
-      { date: 2005, value: 32 },
-      { date: 2010, value: 58 },
-      { date: 2015, value: 65 },
-      { date: 2020, value: 60 },
+      { date: 1993, value: 80 },
+      { date: 1998, value: 75 },
+      { date: 2003, value: 70 },
+      { date: 2005, value: 64 },
+      { date: 2009, value: 52 },
+      { date: 2014, value: 41 },
+      { date: 2019, value: 34 },
     ],
   },
   {
     country: "China",
-    value: 20.0,
+    value: 72.1,
     color: "#fbcb39",
     prodH: [8, 11, 15, 18, 20],
     dataset: [
-      { date: 2000, value: 8 },
-      { date: 2005, value: 11 },
-      { date: 2010, value: 15 },
-      { date: 2015, value: 18 },
-      { date: 2020, value: 20 },
+      { date: 1993, value: 98 },
+      { date: 1998, value: 84 },
+      { date: 2003, value: 93 },
+      { date: 2005, value: 80 },
+      { date: 2009, value: 70 },
+      { date: 2014, value: 60 },
+      { date: 2019, value: 72 },
     ],
   },
   {
     country: "United States",
-    value: 7.0,
+    value: 62.7,
     color: "#007bc8",
     prodH: [1, 3, 5, 10, 7],
     dataset: [
-      { date: 2000, value: 1 },
-      { date: 2005, value: 3 },
-      { date: 2010, value: 5 },
-      { date: 2015, value: 10 },
-      { date: 2020, value: 7 },
+      { date: 1993, value: 90 },
+      { date: 1998, value: 88 },
+      { date: 2003, value: 75 },
+      { date: 2005, value: 88 },
+      { date: 2009, value: 73 },
+      { date: 2014, value: 70 },
+      { date: 2019, value: 62 },
     ],
   },
   {
     country: "Brazil",
-    value: 70.0,
+    value: 25,
     color: "#65cedb",
     prodH: [40, 48, 32, 55, 70],
     dataset: [
-      { date: 2000, value: 40 },
-      { date: 2005, value: 48 },
-      { date: 2010, value: 32 },
-      { date: 2015, value: 55 },
-      { date: 2020, value: 70 },
+      { date: 1993, value: 60 },
+      { date: 1998, value: 50 },
+      { date: 2003, value: 40 },
+      { date: 2005, value: 39 },
+      { date: 2009, value: 35 },
+      { date: 2014, value: 20 },
+      { date: 2019, value: 25 },
     ],
   },
   {
     country: "Australia",
-    value: 7,
+    value: 75,
     color: "#ff6e52",
     prodH: [1, 3, 5, 10, 7],
     dataset: [
-      { date: 2000, value: 1 },
-      { date: 2005, value: 3 },
-      { date: 2010, value: 5 },
-      { date: 2015, value: 10 },
-      { date: 2020, value: 7 },
+      { date: 1993, value: 90 },
+      { date: 1998, value: 88 },
+      { date: 2003, value: 75 },
+      { date: 2005, value: 88 },
+      { date: 2009, value: 73 },
+      { date: 2014, value: 70 },
+      { date: 2019, value: 75 },
     ],
   },
   {
     country: "India",
-    value: 26.0,
+    value: 72,
     color: "#f9de3f",
     prodH: [8, 11, 15, 18, 26],
     dataset: [
-      { date: 2000, value: 8 },
-      { date: 2005, value: 11 },
-      { date: 2010, value: 15 },
-      { date: 2015, value: 18 },
-      { date: 2020, value: 26 },
+      { date: 1993, value: 90 },
+      { date: 1998, value: 88 },
+      { date: 2003, value: 75 },
+      { date: 2005, value: 88 },
+      { date: 2009, value: 73 },
+      { date: 2014, value: 70 },
+      { date: 2019, value: 72 },
     ],
   },
   {
     country: "Argentina",
-    value: 7.3,
+    value: 60,
     color: "#5d2f8e",
     prodH: [1, 3, 5, 10, 7.3],
     dataset: [
-      { date: 2000, value: 1 },
-      { date: 2005, value: 3 },
-      { date: 2010, value: 5 },
-      { date: 2015, value: 10 },
-      { date: 2020, value: 7.3 },
+      { date: 1993, value: 90 },
+      { date: 1998, value: 88 },
+      { date: 2003, value: 75 },
+      { date: 2005, value: 88 },
+      { date: 2009, value: 73 },
+      { date: 2014, value: 70 },
+      { date: 2019, value: 60 },
     ],
   },
   {
     country: "Kazakhstan",
-    value: 13.0,
+    value: 86.2,
     color: "#008fc9",
     prodH: [12, 15, 18, 9, 16.0],
     dataset: [
-      { date: 2000, value: 12 },
-      { date: 2005, value: 15 },
-      { date: 2010, value: 18 },
-      { date: 2015, value: 9 },
-      { date: 2020, value: 16 },
-    ],
-  },
-  {
-    country: "Sudan",
-    value: 65.0,
-    color: "#507dca",
-    prodH: [45, 32, 58, 65, 60],
-    dataset: [
-      { date: 2000, value: 45 },
-      { date: 2005, value: 32 },
-      { date: 2010, value: 58 },
-      { date: 2015, value: 65 },
-      { date: 2020, value: 60 },
+      { date: 1993, value: 100 },
+      { date: 1998, value: 98 },
+      { date: 2003, value: 93 },
+      { date: 2005, value: 85 },
+      { date: 2009, value: 90 },
+      { date: 2014, value: 84 },
+      { date: 2019, value: 86.2 },
     ],
   },
 ];
@@ -171,12 +176,11 @@ function level1() {
 
   barGroups
     .append("rect")
-    .attr("class", "bar")
+    .attr("class", "bar3")
     .attr("x", (d) => {
       return xScale(d.country);
     })
     .attr("width", xScale.bandwidth())
-    // .attr("y",  d => { return height; })
     .attr("height", 0)
     .transition()
     .duration(500)
@@ -190,13 +194,13 @@ function level1() {
       return height - yScale(d.value);
     });
 
-  d3.selectAll(".bar")
+  d3.selectAll(".bar3")
     .on("click", function (actual, i) {
       d3.selectAll(".chart3").remove();
       level2(actual);
     })
     .on("mouseenter", function (actual, i) {
-      d3.selectAll(".value").attr("opacity", 0);
+      d3.selectAll(".value3").attr("opacity", 0);
 
       d3.select(this)
         .transition()
@@ -233,7 +237,7 @@ function level1() {
         });
     })
     .on("mouseleave", function () {
-      d3.selectAll(".value").attr("opacity", 1);
+      d3.selectAll(".value3").attr("opacity", 1);
 
       d3.select(this)
         .transition()
@@ -248,7 +252,7 @@ function level1() {
 
   let text = barGroups
     .append("text")
-    .attr("class", "value")
+    .attr("class", "value3")
     .attr("x", (a) => xScale(a.country) + xScale.bandwidth() / 2)
     .attr("y", (a) => yScale(a.value) - 5)
     .attr("y", (d) => {
@@ -270,25 +274,23 @@ function level1() {
     .attr("text-anchor", "middle")
     .text(0);
 
-  //var text = svg.append("text").attr("x", 50).attr("y", 50).text(1);
-
   text
     .transition()
     .tween("text", function () {
-      var selection = d3.select(this); // selection of node being transitioned
-      var start = d3.select(this).text(); // start value prior to transition
-      var end = this.getAttribute("height"); // specified end value
-      var interpolator = d3.interpolateNumber(start, end); // d3 interpolator
+      var selection = d3.select(this); 
+      var start = d3.select(this).text(); 
+      var end = this.getAttribute("height"); 
+      var interpolator = d3.interpolateNumber(start, end); 
 
       return function (t) {
         selection.text(Math.round(interpolator(t)));
-      }; // return value
+      }; 
     })
-    .duration(3000); ///
+    .duration(3000); 
 
   svg
     .append("text")
-    .attr("class", "label")
+    .attr("class", "label3")
     .attr("x", -(height / 2) - margin)
     .attr("y", margin / 2.4)
     .attr("transform", "rotate(-90)")
@@ -297,11 +299,23 @@ function level1() {
 
   svg
     .append("text")
-    .attr("class", "title")
+    .attr("class", "title3")
     .attr("x", width / 2 + margin)
     .attr("y", 40)
     .attr("text-anchor", "middle")
     .text("Electricity generation by thermo power in 2019");
+
+  svg
+    .append("text")
+    .attr("class", "back2")
+    .attr("x", width / 10)
+    .attr("y", 40)
+    .attr("text-anchor", "middle")
+    .text("Click to find out more")
+    .on("click", function (actual, i) {
+      d3.selectAll(".chart3").remove();
+      level3();
+    });
 }
 
 function level2(actual) {
@@ -335,9 +349,7 @@ function level2(actual) {
       .scaleLinear()
       .range([HEIGHT - MARGINS.top, MARGINS.bottom])
       .domain([
-        d3.min(lineData, function (d) {
-          return d.value;
-        }),
+        0,
         d3.max(lineData, function (d) {
           return d.value;
         }),
@@ -398,7 +410,7 @@ function level2(actual) {
 
   svg
     .append("text")
-    .attr("class", "title")
+    .attr("class", "title3")
     .attr("x", WIDTH / 2 + 80)
     .attr("y", 40)
     .attr("text-anchor", "middle")
@@ -406,7 +418,7 @@ function level2(actual) {
 
   svg
     .append("text")
-    .attr("class", "label")
+    .attr("class", "label3")
     .attr("x", -(HEIGHT / 2) - 80)
     .attr("y", 80 / 2.4)
     .attr("transform", "rotate(-90)")
@@ -414,12 +426,50 @@ function level2(actual) {
     .text("Out of total electricity genration (%)");
   svg
     .append("text")
-    .attr("class", "back")
+    .attr("class", "back3")
     .attr("x", WIDTH / 10)
     .attr("y", 40)
     .attr("text-anchor", "middle")
     .text("Back")
     .on("click", function (actual, i) {
+      d3.selectAll(".chart3").remove();
+      level1();
+    });
+}
+
+function level3() {
+  const svgContainer = d3.select("#container3");
+  const svg = svgContainer.append("svg").attr("class", "chart3");
+  (MARGINS = 80),
+    (WIDTH = 1000 - 2 * MARGINS),
+    (HEIGHT = 600 - 2 * MARGINS),
+    (MARGINS = {
+      top: 20,
+      right: 20,
+      bottom: 20,
+      left: 50,
+    }),
+    svg
+      .append("foreignObject")
+      .attr("class", "graph-title3")
+      .attr("width", WIDTH)
+      .attr("height", 600)
+      .attr("x", 50)
+      .attr("y", 0)
+      .append("xhtml:body")
+      .style("font", "14px 'Helvetica Neue'")
+      .html(
+        "<h1>Thermoelectricity</h1><div><div><p>Thermoelectricity, also called Peltier-Seebeck effect, direct conversion of heat into electricity or electricity into heat through two related mechanisms, the Seebeck effect and the Peltier effect.</p> <p>A thermoelectric device creates a voltage when there is a different temperature on each side. Conversely, when a voltage is applied to it, heat is transferred from one side to the other, creating a temperature difference. At the atomic scale, an applied temperature gradient causes charge carriers in the material to diffuse from the hot side to the cold side.This effect can be used to generate electricity, measure temperature or change the temperature of objects. <p> </p></div><div class='graph-div3'></div></div>"
+      );
+
+  svg
+    .append("text")
+    .attr("class", "back4")
+    .attr("x", WIDTH / 10)
+    .attr("y", 50)
+    .attr("text-anchor", "middle")
+    .text("Back")
+    .on("click", function () {
       d3.selectAll(".chart3").remove();
       level1();
     });

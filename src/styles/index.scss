@@ -68,13 +68,14 @@ body {
 }
 
 .modal-content {
-  background-color: #ececec;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #1d1a1a;
-  width: 50%;
-  border-radius: 4px;
-  margin-top: 200px;
+    background-color: #504c4c;
+    margin: auto;
+    padding: 20px;
+    width: 50%;
+    border-radius: 5px;
+    margin-top: 200px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: #ded701c4;
 }
 
 .modal-content h1 {
@@ -262,5 +263,13 @@ div[class^="plant"]:hover {
         transform: translate(0) scale(1);
         opacity: 1;
     }
+}
+
+.modalP {
+  font-size: 22px;
+}
+
+.modal-content ul li {
+  margin-bottom: 25px;
 }
 
