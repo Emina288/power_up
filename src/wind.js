@@ -452,18 +452,6 @@ function level2(actual) {
         left: 50,
       }),
       svg
-        .append("text")
-        .attr("class", "back4")
-        .attr("x", WIDTH / 10)
-        .attr("y", 650)
-        .attr("text-anchor", "middle")
-        .text("Back")
-        .on("click", function () {
-          d3.selectAll(".chart1").remove();
-          level1();
-        });
-
-      svg
         .append("foreignObject")
         .attr("class", "graph-title1")
         .attr("width", WIDTH)
@@ -476,7 +464,17 @@ function level2(actual) {
           "<h1>Wind Power</h1><div><div><p>Wind power or wind energy is the use of wind to provide the mechanical power through wind turbines to turn electric generators and traditionally to do other work, like milling or pumping.</p><p>When the wind blows past a wind turbine, its blades capture the wind's kinetic energy and rotate, turning it into mechanical energy. This rotation turns an internal shaft connected to a gearbox, which increases the speed of rotation by a factor of 100. That spins a generator that produces electricity.<p> </p></div><div class='graph-div1'></div></div>"
         );
 
-   
+    svg
+      .append("text")
+      .attr("class", "back4")
+      .attr("x", WIDTH / 10)
+      .attr("y", 50)
+      .attr("text-anchor", "middle")
+      .text("Back")
+      .on("click", function () {
+        d3.selectAll(".chart1").remove();
+        level1();
+      });
   }
 
 
