@@ -455,7 +455,7 @@ function level2(actual) {
         .append("text")
         .attr("class", "back4")
         .attr("x", WIDTH / 10)
-        .attr("y", 50)
+        .attr("y", 650)
         .attr("text-anchor", "middle")
         .text("Back")
         .on("click", function () {
@@ -469,7 +469,7 @@ function level2(actual) {
         .attr("width", WIDTH)
         .attr("height", 600)
         .attr("x", 50)
-        .attr("y", 50)
+        .attr("y", 0)
         .append("xhtml:body")
         .style("font", "14px 'Helvetica Neue'")
         .html(
