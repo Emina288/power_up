@@ -1,58 +1,37 @@
 # Power Up
 
 ## Background
+Power-up is a single-page JavaScript application. The main feature of the app is a data visualization that is being represented by using D3.js. It contains data on four different types of electrical power plants. Clients can choose between hydro, thermal, solar, and wind power plant and get information about electricity generation in a few different countries using the selected power plant. Clients can also see electricity generation over the years in each country and read more about the chosen power plant. [Live demo](https://emina288.github.io/power_up/) 
 
-Power Up is a mixture of data visualization and a demo. It contains a visual demonstration of how the electricity is being made and how the electricity travels from the source all the way to our homes. It will also contain data visualization of the selected power plant. 
+![read](./src/images/read.png)
 
-## Functionality & MVP
-
-
-With Power up simulation, users will be able to: 
-
-* Choose a picture that represents a type of a power plant 
-
-* Once the user selects a type of power plant a user will be able to see the animation of how the electricity travel from the source to the clients.
-
-* Users will be able to read data of how much selected power plant is in use in 10 different major countries from the bar graph.
-
-* Users will be able to read how eco friendly selected power plant is.
-
-* Users will be able to close selected power plant and go back to the home page.
-
-In  addition, this project will include:
-
-* An about modal describing the role of electrical energy in our lifes.
-
-* A production README 
-
-## Wireframes 
-
-This app will consist of 4 images that represent types of power plants. It will have, Hydroelectric power plants, Thermal power plants, Solar power plants, and Wind power plants. Ad well as nav links to the Github, my LinkedIn, and the About modal. Clicking on one of the images will lead to a sanimation of how the electricity is being produced in the selected power plant as well as a graph with information about how many of those power plants we have in 10 major countries, and its effects to the environment. 
-
-
-![main](./src/images/main.png)
-
-
-
-![show](./src/images/show.png)
-
-
-## Implementation Timeline
-
-
-* Day 1: Setting up all necessary Node modules that I will need. Setting up the home page, making all the images clickable. Determining the style I want my app to have.
-
-* Day 2: Working on a simulation of how selected power plant functions.
-
-* Day 3: Implementing a graph that contains  interesting information about selected power plant 
-
-
-## Architecture and Technologies 
-
-
+## Technologies 
 * JavaScript 
+* D3.js
+* CSS3
 * HTML5 
-* CSS5 
+* SVG
+
+## Features
+* About button for users to learn more about the application, a button to email me, my GitHub and LinkedIn profile
+* Four clickable images that open up a modal with data visualization
+* Animated bar chart that shows us electrical generation using the selected type of a power plant in 10 different countries
+* Ability to click on bars and get an animated line chart for the specific country 
+* Ability to click on a more button and find out more information on a production process in a selected power plant
+
+## Bar Charts 
+
+By clicking on one of the four images a client gets to a modal that contains an animated bar chart that is build using D3.js libary.
+
+![](https://media.giphy.com/media/lx6NshFmoVQz2cU0CV/giphy.gif)
+
+## 
+
+
+## Initial Implementation Timeline 
+
+5 days 
+
 
 
 
