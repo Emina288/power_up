@@ -25,7 +25,11 @@ By clicking on one of the four images a client gets to a modal that contains an 
 
 ![](https://media.giphy.com/media/lx6NshFmoVQz2cU0CV/giphy.gif)
 
-## 
+## Line Charts 
+
+By clicking on one of the bars a client gets to a modal that is showing an animated line chart of electricity generation over the years in that country. The line chart was created by using D3 javaScript libary and SVG. 
+
+![](https://media.giphy.com/media/J0VGLrYLRrNOoWOokq/giphy.gif)
 
 
 ## Initial Implementation Timeline 
