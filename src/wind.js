@@ -355,7 +355,7 @@ function level2(actual) {
           return d.value;
         }),
       ]),
-    xAxis = d3.axisBottom().scale(xRange),
+    xAxis = d3.axisBottom().scale(xRange).tickFormat(d3.format("d")),
     yAxis = d3.axisLeft().scale(yRange);
 
   const makeYLines = () => d3.axisLeft().scale(yRange);

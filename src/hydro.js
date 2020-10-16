@@ -340,11 +340,10 @@ function level2(actual) {
         bottom: 20,
         left: 50,
       },
-
       xRange = d3
-      .scaleLinear()
-      .range([0, WIDTH])
-      .domain(d3.extent(lineData, dataPoint => dataPoint.date)),
+        .scaleLinear()
+        .range([0, WIDTH])
+        .domain(d3.extent(lineData, (dataPoint) => dataPoint.date)),
       yRange = d3
         .scaleLinear()
         .range([HEIGHT - MARGINS.top, MARGINS.bottom])
@@ -354,7 +353,7 @@ function level2(actual) {
             return d.value;
           }),
         ]),
-      xAxis = d3.axisBottom().scale(xRange),
+      xAxis = d3.axisBottom().scale(xRange).tickFormat(d3.format("d")),
       yAxis = d3.axisLeft().scale(yRange);
 
       const makeYLines = () => d3.axisLeft().scale(yRange);
