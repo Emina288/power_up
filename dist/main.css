@@ -528,11 +528,6 @@ body {
 .main-content {
   position: absolute; }
 
-.side {
-  float: left;
-  padding: 20px;
-  margin: 200px 0 0 30px; }
-
 .side ul {
   list-style-type: none;
   padding: 0; }
